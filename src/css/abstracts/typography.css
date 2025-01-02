@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+body {
+  font-family: "Kanit", serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+  position: relative;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+p {
+  color: var(--paragraph-clr);
+  line-height: 160%;
+  font-weight: 300;
+}
+.hero__credits p {
+  line-height: 140%;
+  color: hsl(218, 8%, 40%);
+  font-size: 11px;
+}
+.hero__paragraph {
+  text-transform: uppercase;
+  line-height: 120%;
+  color: hsl(0, 0%, 38%);
+  font-weight: 300;
+  font-size: 14px;
+}
+.h2-heading {
+  position: relative;
+  text-transform: uppercase;
+  color: #486190;
+  font-weight: 400;
+  font-size: clamp(2rem, 7vw, 3rem);
+  margin-bottom: 2.5rem;
+  display: flex;
+  align-items: center;
+  word-break: keep-all;
+  white-space: nowrap;
+}
+.h2-heading::before {
+  content: attr(data-h2-heading);
+  position: absolute;
+  left: 0;
+  display: block;
+  top: -25px;
+  width: max-content;
+  height: 100%;
+  font-size: 3rem;
+  color: inherit;
+  opacity: 0.2;
+  z-index: -1;
+  animation: h2-subheading 5s ease-in-out infinite alternate;
+}
+@keyframes h2-subheading {
+  from {
+    letter-spacing: 0px;
+  }
+  to {
+    letter-spacing: 10px;
+  }
+}
+.heading-line {
+  height: 1px;
+  width: 100%;
+  margin-left: 10px;
+  background-color: #6094f4;
+}
+.body-paragraph {
+  line-height: 160%;
+  font-weight: 300;
+  color: var(--paragraph-clr);
+  margin-bottom: 1rem;
+}
+.h3-heading {
+  color: var(--dark-200);
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 2.5rem;
+}
+.review__name {
+  font-size: 24px;
+}
+.review__date {
+  color: var(--grey);
+  font-weight: 300;
+}
+.h2-heading--mini-gallery {
+  font-size: clamp(22px, 5vw, 32px);
+}
+.h2-heading--mini-gallery::before {
+  content: attr(data-h2-heading);
+  font-size: 32px;
+  top: -20px;
+}
+.services h2 {
+  color: var(--white);
+}
+.h2-heading-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.h2-heading-wrapper h2 {
+  order: 2;
+}
+.h2-heading-wrapper h2::before {
+  right: 0;
+  left: unset;
+}
+.h2-heading-wrapper .heading-line {
+  z-index: 5;
+  background-color: var(--white);
+  margin-bottom: 38px;
+  margin-right: 7px;
+}
+.card-design-service__wrapper h3 {
+  text-align: center;
+  color: var(--white);
+}
+.card-design-service__wrapper p {
+  text-align: center;
+  margin-bottom: 16px;
+}
+.h3-heading--company {
+  text-align: center;
+  font-size: clamp(24px, 7vw, 32px);
+  margin-bottom: 64px;
+}
+.h2-heading[data-h2-heading] {
+  margin-bottom: 56px;
+}
+.dream-team .h2-heading > img:nth-child(2) {
+  display: block;
+}
+.dream-team .h2-heading > img:nth-child(1) {
+  display: none;
+}
+@media (min-width: 768px) {
+  .dream-team .h2-heading > img:nth-child(2) {
+    display: none;
+  }
+  .dream-team .h2-heading > img:nth-child(1) {
+    display: block;
+  }
+}
+.mini-gallery__footer-heading {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 32px;
+}
+.mini-gallery__footer-heading,
+.paragraph {
+  color: var(--white);
+}
+.mini-gallery .paragraph {
+  font-weight: 300;
+  line-height: 150%;
+}
+.extras__paragraph-wrapper h3 {
+  text-transform: uppercase;
+  color: var(--white);
+  letter-spacing: 1px;
+  font-weight: 300;
+  margin-bottom: 16px;
+}
+.extras__paragraph-wrapper p {
+  font-weight: 200;
+  margin-bottom: 16px;
+}
+.extras-link {
+  display: flex;
+  gap: 2px;
+  color: var(--white);
+  text-decoration: underline;
+  font-weight: 200;
+}
+.blog .h2-heading-wrapper h2 {
+  color: var(--white);
+}

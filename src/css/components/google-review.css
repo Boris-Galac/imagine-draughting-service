@@ -1,0 +1,41 @@
+.reviews {
+  position: relative;
+  isolation: isolate;
+}
+.reviews::before {
+  content: "";
+  position: absolute;
+  background: url("/src/assets/images/review-overlay.jpg") no-repeat center
+    center/cover;
+  inset: 0;
+  z-index: -1;
+  width: 250%;
+  opacity: 0.15;
+}
+.reviews__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+.review {
+}
+.review__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.review__col:nth-child(1) {
+  display: flex;
+}
+.review__col:nth-child(1) img {
+  margin-right: 8px;
+}
+.review__col {
+}
+.review__stars {
+}
+.review__info-wrapper {
+}
+.review__stars {
+  margin-bottom: 8px;
+}

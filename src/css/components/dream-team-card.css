@@ -1,0 +1,117 @@
+.dream-team-card {
+  position: relative;
+  height: 600px !important;
+  width: 100%;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 32px;
+  /* place-items: center; */
+  isolation: isolate;
+  background: transparent;
+  perspective: 850px;
+}
+.dream-team-card__inner {
+  outline: 1px solid var(--white);
+  box-shadow: 0 4px 54px 5px hsl(207, 100%, 50%);
+  background: linear-gradient(
+    to bottom,
+    hsl(216, 56%, 41%),
+    hsl(217, 30%, 58%)
+  );
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  border-radius: 7px;
+}
+.dream-team-card:hover .dream-team-card__inner {
+  transform: rotateY(180deg);
+}
+.dream-team-card__front,
+.dream-team-card__back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+.dream-team-card__front {
+  padding-block: 24px;
+  padding-inline: 16px;
+}
+.dream-team-card__back {
+  transform: rotateY(180deg);
+}
+.dream-team-card__inner::before {
+  content: "";
+  position: absolute;
+  background: url("/src/assets/images/dream-team-designers/dream-team-card-overlay.png")
+    no-repeat center center/cover;
+  inset: 0;
+  mix-blend-mode: color-burn;
+  z-index: -1;
+}
+.dream-team-card__name,
+.dream-team-card__expertise {
+  text-transform: uppercase;
+  text-align: center;
+}
+.dream-team-card__header {
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+.dream-team-card__name {
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 8px;
+}
+.award {
+  text-align: center;
+}
+.dream-team-card__expertise {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  white-space: nowrap;
+  margin-inline: auto;
+  justify-self: center;
+}
+.dream-team-card__expertise-line {
+  height: 1px;
+  width: 100%;
+  background-color: var(--white);
+  margin-right: 5px;
+}
+.dream-team-card__body ul {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.award {
+  margin-bottom: 8px;
+}
+.dream-team-card__body-li {
+  font-weight: 200;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  gap: 7px;
+  color: hsl(219, 100%, 92%);
+}
+.dream-team-card__footer {
+  display: grid;
+  place-items: center;
+  gap: 8px;
+  margin-top: 30px;
+}
+.dream-team-card__footer-paragraph {
+  letter-spacing: 1px;
+}
+.dream-team-card:last-child .dream-team-card__footer {
+  margin-top: 8px;
+}

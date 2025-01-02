@@ -1,0 +1,18 @@
+:root {
+  --black: hsl(0, 0%, 0%);
+  --dark: hsl(208, 18%, 19%);
+  --dark-200: hsl(220, 8%, 31%);
+  --grey: hsl(210, 13%, 49%);
+  --blue: hsl(220, 72%, 44%);
+  --white: hsl(0, 0%, 100%);
+  --paragraph-clr: hsl(206, 10%, 32%);
+  --primary-btn-clr: hsl(37, 88%, 84%);
+  --secondary-btn-clr: linear-gradient(
+    to right,
+    hsl(0, 0%, 84%),
+    hsl(0, 0%, 100%)
+  );
+  --primary-clr: hsl(330, 2%, 20%);
+  --secondary-clr: hsl(213, 63%, 50%);
+  --green-100: hsl(99, 49%, 46%);
+}

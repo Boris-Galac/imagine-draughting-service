@@ -1,0 +1,20 @@
+.associations-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  box-shadow: 0 10px 48px rgb(208, 211, 216);
+  border-radius: 10px;
+}
+.associations-card .paragraph {
+  color: var(--paragraph-clr);
+  text-align: center;
+}
+.associations-card strong {
+  font-weight: 500;
+}
+.associations__card-img {
+  object-fit: contain;
+  width: 70% !important;
+}
