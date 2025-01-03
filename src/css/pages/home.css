@@ -264,6 +264,7 @@
     display: flex;
     position: fixed;
     width: 50%;
+    z-index: 500;
   }
   .hero__cta-wrapper {
     gap: 32px;
@@ -533,14 +534,31 @@
 }
 /* SERVICES section */
 .services {
-  background: radial-gradient(
-    circle,
+  /* clip-path: polygon(0 1%, 100% 0, 100% 99%, 0% 100%); */
+  padding-block: 9rem;
+}
+.services__overlay {
+  position: absolute;
+  inset: 0;
+  height: 101%;
+  background: linear-gradient(
+    to bottom,
     rgb(31, 42, 79) 0%,
     rgb(56, 85, 179) 24%,
     rgb(55, 116, 195) 100%
   );
-  clip-path: polygon(0 1%, 100% 0, 100% 99%, 0% 100%);
-  padding-block: 9rem;
+  clip-path: polygon(0 2%, 100% 0, 100% 98%, 0% 100%);
+}
+.services__overlay::after {
+  content: "";
+  position: absolute;
+  background: url("/src/assets/images/service-overlay-graphic.png") no-repeat
+    center center/cover;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.05;
+  z-index: -1;
 }
 .services .container {
   width: min(100% - 32px, 1132px);
@@ -556,16 +574,20 @@
   max-width: 850px;
 }
 @media (min-width: 1024px) {
-  .services {
-    background: radial-gradient(
-      circle,
-      rgb(32, 79, 134) 0%,
-      rgb(56, 85, 179) 54%,
+  .services__overlay {
+    position: absolute;
+    inset: 0;
+    height: 101%;
+    background: linear-gradient(
+      to bottom,
+      rgb(31, 42, 79) 0%,
+      rgb(56, 85, 179) 24%,
       rgb(55, 116, 195) 100%
     );
     clip-path: polygon(0 7%, 100% 0, 100% 92%, 0% 100%);
-    box-shadow: 10px 10px 20px 50px rgba(0, 0, 0, 0.5);
-    padding-block: 20rem;
+  }
+  .services__overlay::after {
+    opacity: 0.1;
   }
   .services__wrapper {
     display: grid;
