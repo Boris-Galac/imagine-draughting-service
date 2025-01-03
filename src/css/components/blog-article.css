@@ -44,3 +44,11 @@
   display: block;
   bottom: -1px;
 }
+@media (min-width: 1200px) {
+  .blog {
+    padding-block: 37rem;
+  }
+  .blog-article {
+    display: flex;
+  }
+}

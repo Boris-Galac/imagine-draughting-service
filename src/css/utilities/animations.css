@@ -45,3 +45,17 @@
     opacity: 1;
   }
 }
+
+/* carousel */
+
+.current {
+  opacity: 1 !important;
+}
+.slide-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  transition: all 1.5s ease-in-out;
+  opacity: 0;
+}

@@ -18,3 +18,20 @@
   object-fit: contain;
   width: 70% !important;
 }
+@media (min-width: 1200px) {
+  .associations-card {
+    flex-direction: row;
+  }
+  .associations-card img {
+    max-width: 250px;
+  }
+  .associations-card:nth-child(2) img {
+    order: 2;
+  }
+  .associations-card:nth-child(2) .paragraph {
+    text-align: right;
+  }
+  .associations-card .paragraph {
+    text-align: left;
+  }
+}

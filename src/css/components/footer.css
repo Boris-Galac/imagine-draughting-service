@@ -14,12 +14,6 @@
 .footer__logo-link {
   margin-bottom: 64px;
   margin-inline: auto;
-  animation: footer-logo 6s infinite linear;
-}
-@keyframes footer-logo {
-  to {
-    transform: rotateY(360deg);
-  }
 }
 .footer__header-info {
   display: grid;

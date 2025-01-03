@@ -24,7 +24,8 @@ p {
 .hero__credits p {
   line-height: 140%;
   color: hsl(218, 8%, 40%);
-  font-size: 11px;
+  font-size: clamp(11px, 2vw, 16px);
+  place-self: center;
 }
 .hero__paragraph {
   text-transform: uppercase;
@@ -33,6 +34,17 @@ p {
   font-weight: 300;
   font-size: 14px;
 }
+.hero__subheadline > * {
+  width: min(100%, 600px);
+}
+.hero-headline--mobile {
+  display: block;
+  width: 100%;
+}
+.hero-headline--desktop {
+  display: none;
+}
+
 .h2-heading {
   position: relative;
   text-transform: uppercase;
@@ -124,6 +136,7 @@ p {
 }
 .card-design-service__wrapper h3 {
   text-align: center;
+  line-height: 110%;
   color: var(--white);
 }
 .card-design-service__wrapper p {
@@ -185,4 +198,37 @@ p {
 }
 .blog .h2-heading-wrapper h2 {
   color: var(--white);
+}
+.dream-team .h2-heading {
+  margin-bottom: 64px;
+}
+@media (min-width: 1024px) {
+  .hero-headline--mobile {
+    display: none;
+  }
+  .hero-headline--desktop {
+    display: block;
+    width: 100%;
+  }
+  .hero__paragraph {
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+  .h2-heading--mini-gallery {
+    font-size: clamp(32px, 5vw, 48px);
+  }
+  .h2-heading--mini-gallery::before {
+    content: attr(data-h2-heading);
+    font-size: 62px;
+    top: -33px;
+  }
+  .mini-gallery__footer-heading {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 58px;
+  }
+  .h2-heading[data-h2-heading] {
+    margin-bottom: 108px;
+  }
 }

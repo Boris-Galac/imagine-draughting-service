@@ -6,13 +6,17 @@
     <meta name="description" content="Lorem ipsum dolor sit amet." />
     <meta name="robots" content="index, follow" />
     <meta name="keywords" content="lorem, ipsum, dolor, sit, amet" />
-
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="/src/css/style.css" />
 
     <script defer src="/src/js/main.js"></script>
   </head>
   <body>
-    <header class="header">
+    <header class="header header--mobile">
       <button
         class="ham-btn"
         aria-label="ham button"
@@ -47,13 +51,51 @@
         </ul>
       </nav>
       <a class="header__logo" href="#"
-        ><img src="/src/assets/images/hero-logo.jpg" alt="logo image"
+        ><img src="/src/assets/images/footer-logo.png" alt="logo image"
       /></a>
     </header>
     <main class="main">
       <!-- 👉 HERO section -->
       <section class="hero">
         <div class="hero__wrapper">
+          <header class="header header--desktop">
+            <button
+              class="ham-btn ham-btn--desktop"
+              aria-label="ham button"
+              tabindex="0"
+              aria-controls="nav"
+              data-active="false"
+            >
+              <div class="ham-btn-line"></div>
+              <div class="ham-btn-line"></div>
+              <div class="ham-btn-line"></div>
+            </button>
+            <nav class="nav nav--desktop" aria-expanded="false">
+              <ul class="nav__list">
+                <li class="nav__item">
+                  <a href="#" class="nav__link">Home</a>
+                </li>
+                <li class="nav__item">
+                  <a href="#" class="nav__link">Services</a>
+                </li>
+                <li class="nav__item">
+                  <a href="#" class="nav__link">Our team</a>
+                </li>
+                <li class="nav__item">
+                  <a href="#" class="nav__link">Blog</a>
+                </li>
+                <li class="nav__item">
+                  <a href="#" class="nav__link">About us</a>
+                </li>
+                <li class="nav__item">
+                  <a href="#" class="nav__link">Contact</a>
+                </li>
+              </ul>
+            </nav>
+            <a class="header__logo header__logo-desktop" href="#"
+              ><img src="/src/assets/images/footer-logo.png" alt="logo image"
+            /></a>
+          </header>
           <div class="hero__content-wrapper">
             <figure class="hero__credits">
               <img
@@ -82,6 +124,14 @@
                   alt="headline: for every project you imagine"
                   aria-label="for every project you imagine"
                   title="FOR EVERY PROJECT YOU IMAGINE"
+                  class="hero-headline--mobile"
+                />
+                <img
+                  src="/src/assets/images/hero-headline--desk.svg"
+                  alt="headline: for every project you imagine"
+                  aria-label="for every project you imagine"
+                  title="FOR EVERY PROJECT YOU IMAGINE"
+                  class="hero-headline--desktop"
                 />
               </h1>
               <p class="hero__paragraph">
@@ -113,9 +163,6 @@
             />
           </div>
           <div class="hero__footer">
-            <a href="#" class="whatsapp-btn"
-              ><img src="/src/assets/icons/whup-icon.svg" alt="whatsapp icon"
-            /></a>
             <div class="hero__footer-contact">
               <a href="#"
                 ><img
@@ -134,16 +181,144 @@
                 01253543259</a
               >
             </div>
-            <a href="#" class="scroll-down-btn"
+            <a href="#about" class="scroll-down-btn"
               ><img
                 src="/src/assets/icons/scroll-down-icon.svg"
                 alt="scroll down"
             /></a>
           </div>
         </div>
+        <div class="hero__visual-wrapper--desktop">
+          <div class="hero-visual__box">
+            <div class="gallery">
+              <img
+                src="/src/assets/images/hero-slider/slider-1-img-1.jpg"
+                class="slide-img current"
+              />
+              <img
+                src="/src/assets/images/hero-slider/slider-1-img-2.jpg"
+                class="slide-img"
+              />
+              <img
+                src="/src/assets/images/hero-slider/slider-1-img-3.jpg"
+                class="slide-img"
+              />
+              <img
+                src="/src/assets/images/hero-slider/slider-1-img-4.jpg"
+                class="slide-img"
+              />
+              <img
+                src="/src/assets/images/hero-slider/slider-1-img-5.jpg"
+                class="slide-img"
+              />
+            </div>
+          </div>
+          <div class="hero-visual__box">
+            <img src="/src/assets/images/hero-slider/hero-visual-google-reviews.svg" alt="google reviews">
+          </div>
+          <div class="hero-visual__box">
+            <img src="/src/assets/images/hero-slider/2013-visual.svg" alt="since 2013">
+          </div>
+          <div class="hero-visual__box">
+            <img src="/src/assets/images/hero-slider/500+.svg" alt="500+ satisfied clients">
+
+          </div>
+          <div class="hero-visual__box">
+            <span>DESIGN</span>
+          </div>
+          <div class="hero-visual__box">
+            <div class="gallery">
+              <img
+              src="/src/assets/images/hero-slider/slider-2-img-1.jpg"
+              class="slide-img current"
+            />
+            <img
+              src="/src/assets/images/hero-slider/slider-2-img-2.jpg"
+              class="slide-img"
+            />
+            <img
+              src="/src/assets/images/hero-slider/slider-2-img-3.jpg"
+              class="slide-img"
+            />
+            <img
+              src="/src/assets/images/hero-slider/slider-2-img-4.jpg"
+              class="slide-img"
+            />
+            <img
+              src="/src/assets/images/hero-slider/slider-2-img-5.jpg"
+              class="slide-img"
+            />
+
+            </div>
+          </div>
+          <div class="hero-visual__box">
+            <div class="gallery">
+              <img
+              src="/src/assets/images/hero-slider/slider-3-img-1.jpg"
+              class="slide-img current"
+            />
+            <img
+              src="/src/assets/images/hero-slider/slider-3-img-2.jpg"
+              class="slide-img"
+            />
+            <img
+              src="/src/assets/images/hero-slider/slider-3-img-3.jpg"
+              class="slide-img"
+            />
+            <img
+              src="/src/assets/images/hero-slider/slider-3-img-4.jpg"
+              class="slide-img"
+            />
+            <img
+              src="/src/assets/images/hero-slider/slider-3-img-5.jpg"
+              class="slide-img"
+            />
+
+            </div>
+          </div>
+          <div class="hero-visual__box">
+
+          </div>
+          <div class="hero-visual__box">
+            <span>2D</span>
+            <span>3D</span>
+          </div>
+          <div class="hero-visual__box">
+            <img src="/src/assets/images/north-western-illustration.svg" alt="north and western">
+          </div>
+          <div class="hero-visual__box">
+            <img src="/src/assets/images/hero-slider/hero-30-awards.svg" alt="awards">
+          </div>
+          <div class="hero-visual__box">
+            <div class="gallery">
+              <img
+              src="/src/assets/images/hero-slider/slider-4-img-1.jpg"
+              class="slide-img current"
+            />
+            <img
+              src="/src/assets/images/hero-slider/slider-4-img-2.jpg"
+              class="slide-img"
+            />
+            <img
+              src="/src/assets/images/hero-slider/slider-4-img-3.jpg"
+              class="slide-img"
+            />
+            <img
+              src="/src/assets/images/hero-slider/slider-4-img-4.jpg"
+              class="slide-img"
+            />
+            <img
+              src="/src/assets/images/hero-slider/slider-4-img-5.jpg"
+              class="slide-img"
+            />
+
+            </div>
+          </div>
+        </div>
+        </div>
       </section>
       <!-- 👉 ABOUT-US section -->
-      <section class="about-us">
+      <section class="about-us" id="about">
         <div class="container">
           <div class="about-us__wrapper">
             <h2 class="h2-heading" data-h2-heading="who we are">
@@ -160,13 +335,13 @@
                   manufacture, marketing use.
                 </p>
                 <div class="about-us__btn-wrapper">
-                  <a href="#" class="btn meet-the-team-btn"
+                  <a href="#" class="btn meet-the-team-btn secondary-btn--hover"
                     >Meet the team
                     <img
                       src="/src/assets/icons/meat-the-team-icon.svg"
                       alt="team"
                   /></a>
-                  <a href="#" class="btn request-free-quote-btn"
+                  <a href="#" class="btn request-free-quote-btn secondary-btn--hover"
                     >Request free quote
                     <img
                       src="/src/assets/icons/rewuest-free-quote-icon.svg"
@@ -258,52 +433,69 @@
           <div class="mini-gallery__gallery">
             <div class="mini-gallery__grid-imgs">
               <figure class="mini-gallery__wrapper">
-                <img
-                  src="/src/assets/images/thumbnail-gallery/slide-1 (1).jpg"
-                  alt="3d model image"
-                />
+                <div class="gallery">
+                 <img src="/src/assets/images/home-gallery/slide-1-img-1.jpg" alt="3D work project" class="slide-img">
+                 <img src="/src/assets/images/home-gallery/slide-1-img-2.jpg" alt="3D work project" class="slide-img">
+                 <img src="/src/assets/images/home-gallery/slide-1-img-3.jpg" alt="3D work project" class="slide-img">
+                 <img src="/src/assets/images/home-gallery/slide-1-img-4.jpg" alt="3D work project" class="slide-img">
+                </div>
+
               </figure>
               <figure class="mini-gallery__wrapper">
-                <img
-                  src="/src/assets/images/thumbnail-gallery/slide-1 (2).jpg"
-                  alt="3d model image"
-                />
+                <div class="gallery">
+                  <img src="/src/assets/images/home-gallery/slide-3-img-1.jpg" alt="3D work project" class="slide-img">
+                  <img src="/src/assets/images/home-gallery/slide-3-img-2.jpg" alt="3D work project" class="slide-img">
+                  <img src="/src/assets/images/home-gallery/slide-3-img-3.jpg" alt="3D work project" class="slide-img">
+                  <img src="/src/assets/images/home-gallery/slide-3-img-4.jpg" alt="3D work project" class="slide-img">
+                </div>
               </figure>
               <figure class="mini-gallery__wrapper">
-                <img
-                  src="/src/assets/images/thumbnail-gallery/slide-1 (3).jpg"
-                  alt="3d model image"
-                />
+                <div class="gallery">
+                  <img src="/src/assets/images/home-gallery/slide-5-img-1.jpg" alt="3D work project" class="slide-img">
+                  <img src="/src/assets/images/home-gallery/slide-5-img-2.jpg" alt="3D work project" class="slide-img">
+                  <img src="/src/assets/images/home-gallery/slide-5-img-3.jpg" alt="3D work project" class="slide-img">
+                  <img src="/src/assets/images/home-gallery/slide-5-img-4.jpg" alt="3D work project" class="slide-img">
+                 </div>
               </figure>
               <figure class="mini-gallery__wrapper">
-                <img
-                  src="/src/assets/images/thumbnail-gallery/slide-1 (4).jpg"
-                  alt="3d model image"
-                />
+                <div class="gallery">
+                  <img src="/src/assets/images/home-gallery/slide-2-img-1.jpg" alt="3D work project" class="slide-img">
+                  <img src="/src/assets/images/home-gallery/slide-2-img-2.jpg" alt="3D work project" class="slide-img">
+                  <img src="/src/assets/images/home-gallery/slide-2-img-3.jpg" alt="3D work project" class="slide-img">
+                  <img src="/src/assets/images/home-gallery/slide-2-img-4.jpg" alt="3D work project" class="slide-img">
+                 </div>
               </figure>
               <figure class="mini-gallery__wrapper">
-                <img
-                  src="/src/assets/images/thumbnail-gallery/slide-1 (5).jpg"
-                  alt="3d model image"
-                />
+                <div class="gallery">
+                  <img src="/src/assets/images/home-gallery/slide-4-img-1.jpg" alt="3D work project" class="slide-img">
+                  <img src="/src/assets/images/home-gallery/slide-4-img-2.jpg" alt="3D work project" class="slide-img">
+                  <img src="/src/assets/images/home-gallery/slide-4-img-3.jpg" alt="3D work project" class="slide-img">
+                  <img src="/src/assets/images/home-gallery/slide-4-img-4.jpg" alt="3D work project" class="slide-img">
+                 </div>
               </figure>
               <figure class="mini-gallery__wrapper">
-                <img
-                  src="/src/assets/images/thumbnail-gallery/slide-1 (6).jpg"
-                  alt="3d model image"
-                />
+                <div class="gallery">
+                  <img src="/src/assets/images/home-gallery/slide-6-img-1.jpg" alt="3D work project" class="slide-img">
+                  <img src="/src/assets/images/home-gallery/slide-6-img-2.jpg" alt="3D work project" class="slide-img">
+                  <img src="/src/assets/images/home-gallery/slide-6-img-3.jpg" alt="3D work project" class="slide-img">
+                  <img src="/src/assets/images/home-gallery/slide-6-img-4.jpg" alt="3D work project" class="slide-img">
+                 </div>
               </figure>
               <figure class="mini-gallery__wrapper">
-                <img
-                  src="/src/assets/images/thumbnail-gallery/slide-1 (7).jpg"
-                  alt="3d model image"
-                />
+                <div class="gallery">
+                  <img src="/src/assets/images/home-gallery/slide-7-img-1.jpg" alt="3D work project" class="slide-img">
+                  <img src="/src/assets/images/home-gallery/slide-7-img-2.jpg" alt="3D work project" class="slide-img">
+                  <img src="/src/assets/images/home-gallery/slide-7-img-3.jpg" alt="3D work project" class="slide-img">
+                  <img src="/src/assets/images/home-gallery/slide-7-img-4.jpg" alt="3D work project" class="slide-img">
+                 </div>
               </figure>
               <figure class="mini-gallery__wrapper">
-                <img
-                  src="/src/assets/images/thumbnail-gallery/slide-1 (8).jpg"
-                  alt="3d model image"
-                />
+                <div class="gallery">
+                  <img src="/src/assets/images/home-gallery/slide-8-img-1.jpg" alt="3D work project" class="slide-img">
+                  <img src="/src/assets/images/home-gallery/slide-8-img-2.jpg" alt="3D work project" class="slide-img">
+                  <img src="/src/assets/images/home-gallery/slide-8-img-3.jpg" alt="3D work project" class="slide-img">
+                  <img src="/src/assets/images/home-gallery/slide-8-img-4.jpg" alt="3D work project" class="slide-img">
+                 </div>
               </figure>
             </div>
             <div class="mini-gallery__footer">
@@ -343,9 +535,15 @@
           <div class="services__wrapper">
             <article class="service-card">
               <a href="#" class="service-card__thumbnail"
-                ><img
+                >
+                <img
                   class="service-card__thumbnail-img"
                   src="/src/assets/images/services-card/2d-cad-thumbnail.png"
+                  alt="2D cad"
+                />
+                <img
+                  class="service-card__thumbnail-img"
+                  src="/src/assets/images/services-card/img01.jpg"
                   alt="2D cad"
                 />
               </a>
@@ -358,17 +556,25 @@
                   </p>
                 </div>
                 <a href="#" class="service-card-btn"
-                  ><img
+                  >
+                  <img
                     src="/src/assets/icons/service-card-arrow-icon.svg"
                     alt="arrow icon"
-                /></a>
+                />
+              </a>
               </div>
             </article>
             <article class="service-card">
               <a href="#" class="service-card__thumbnail"
-                ><img
+                >
+                <img
                   class="service-card__thumbnail-img"
                   src="/src/assets/images/services-card/3d-cad-thumbnail.png"
+                  alt="3D cad"
+                />
+                <img
+                  class="service-card__thumbnail-img"
+                  src="/src/assets/images/services-card/image 130.jpg"
                   alt="3D cad"
                 />
               </a>
@@ -389,9 +595,15 @@
             </article>
             <article class="service-card">
               <a href="#" class="service-card__thumbnail"
-                ><img
+                >
+                <img
                   class="service-card__thumbnail-img"
                   src="/src/assets/images/services-card/3d-cad-modeling-thumbnail.png"
+                  alt="3D cad"
+                />
+                <img
+                  class="service-card__thumbnail-img"
+                  src="/src/assets/images/services-card/image 131.jpg"
                   alt="3D cad"
                 />
               </a>
@@ -414,9 +626,15 @@
             </article>
             <article class="service-card">
               <a href="#" class="service-card__thumbnail"
-                ><img
+                >
+                <img
                   class="service-card__thumbnail-img"
                   src="/src/assets/images/services-card/cad-conversion-thumbanil.png"
+                  alt="3D cad"
+                />
+                <img
+                  class="service-card__thumbnail-img"
+                  src="/src/assets/images/services-card/image 132.jpg"
                   alt="3D cad"
                 />
               </a>
@@ -439,9 +657,15 @@
             </article>
             <article class="service-card">
               <a href="#" class="service-card__thumbnail"
-                ><img
+                >
+                <img
                   class="service-card__thumbnail-img"
                   src="/src/assets/images/services-card/rendering-thumbnail.png"
+                  alt="Rendering and animation"
+                />
+                <img
+                  class="service-card__thumbnail-img"
+                  src="/src/assets/images/services-card/image 134.jpg"
                   alt="Rendering and animation"
                 />
               </a>
@@ -464,9 +688,15 @@
             </article>
             <article class="service-card">
               <a href="#" class="service-card__thumbnail"
-                ><img
+                >
+                <img
                   class="service-card__thumbnail-img"
                   src="/src/assets/images/services-card/reverse-thumbanil.png"
+                  alt="reverse engineering"
+                />
+                <img
+                  class="service-card__thumbnail-img"
+                  src="/src/assets/images/services-card/image 135.jpg"
                   alt="reverse engineering"
                 />
               </a>
@@ -487,9 +717,15 @@
             </article>
             <article class="service-card">
               <a href="#" class="service-card__thumbnail"
-                ><img
+                >
+                <img
                   class="service-card__thumbnail-img"
                   src="/src/assets/images/services-card/prototype-thumbanil.png"
+                  alt="Prototype thumbnail"
+                />
+                <img
+                  class="service-card__thumbnail-img"
+                  src="/src/assets/images/services-card/img08.jpg"
                   alt="Prototype thumbnail"
                 />
               </a>
@@ -512,9 +748,15 @@
             </article>
             <article class="service-card">
               <a href="#" class="service-card__thumbnail"
-                ><img
+                >
+                <img
                   class="service-card__thumbnail-img"
                   src="/src/assets/images/services-card/plotting-thumbanil.png"
+                  alt="PPlotting thumbnail"
+                />
+                <img
+                  class="service-card__thumbnail-img"
+                  src="/src/assets/images/services-card/image 137.jpg"
                   alt="PPlotting thumbnail"
                 />
               </a>
@@ -535,32 +777,15 @@
             </article>
             <article class="service-card">
               <a href="#" class="service-card__thumbnail"
-                ><img
-                  class="service-card__thumbnail-img"
-                  src="/src/assets/images/services-card/plotting-thumbanil.png"
-                  alt="PPlotting thumbnail"
-                />
-              </a>
-              <div class="service-card__body">
-                <div>
-                  <span class="service-card-heading">Plotting Service</span>
-                  <p class="paragraph">
-                    Plotting Service Once drawings are progressed in 2D or 3D
-                    CAD format, if required in A0, A1 or A2 format...
-                  </p>
-                </div>
-                <a href="#" class="service-card-btn"
-                  ><img
-                    src="/src/assets/icons/service-card-arrow-icon.svg"
-                    alt="arrow icon"
-                /></a>
-              </div>
-            </article>
-            <article class="service-card">
-              <a href="#" class="service-card__thumbnail"
-                ><img
+                >
+                <img
                   class="service-card__thumbnail-img"
                   src="/src/assets/images/services-card/fast-track-service-thumbanil.png"
+                  alt="Fast track service"
+                />
+                <img
+                  class="service-card__thumbnail-img"
+                  src="/src/assets/images/services-card/image 138.jpg"
                   alt="Fast track service"
                 />
               </a>
@@ -581,9 +806,15 @@
             </article>
             <article class="service-card">
               <a href="#" class="service-card__thumbnail"
-                ><img
+                >
+                <img
                   class="service-card__thumbnail-img"
                   src="/src/assets/images/services-card/cad-agency-thumbnail.png"
+                  alt="Cad agency"
+                />
+                <img
+                  class="service-card__thumbnail-img"
+                  src="/src/assets/images/services-card/image 133.jpg"
                   alt="Cad agency"
                 />
               </a>
@@ -646,7 +877,7 @@
                   src="src/assets/images/company-stats/clients-illustration.gif"
                   alt="clients"
                 />
-                <span class="company__num"> 500 <span>+</span> </span>
+                <span class="company__num count" data-num="500"> 500 <span>+</span> </span>
                 <span class="company__subheading">Satisfied clients</span>
               </div>
               <div class="company__box">
@@ -654,7 +885,7 @@
                   src="src/assets/images/company-stats/drawing-illustration.gif"
                   alt="drawings"
                 />
-                <span class="company__num"> 2209 </span>
+                <span class="company__num count" data-num="2209"> 2209 </span>
                 <span class="company__subheading">Drawings completed</span>
               </div>
               <div class="company__box">
@@ -662,7 +893,7 @@
                   src="src/assets/images/company-stats/designers-illustration.gif"
                   alt="designers"
                 />
-                <span class="company__num">30</span>
+                <span class="company__num count" data-num="30">30</span>
                 <span class="company__subheading">Designers on hand</span>
               </div>
             </div>
@@ -1295,7 +1526,7 @@
                         </li>
                       </ul>
                     </div>
-                    <div class="dream-team-card__footer">
+                    <div class="dream-team-card__footer mani-ram--footer">
                       <div class="dream-team-card__footer-paragraph">
                         Software used
                       </div>
@@ -1338,7 +1569,7 @@
                   src="/src/assets/images/retainer-service-img.png"
                   alt="retainer service"
                 />
-                <div class="extras__paragraph-wrapper">
+                <div class="extras__paragraph-wrapper extras__paragraph-wrapper--desktop extras__paragraph-wrapper--desktop--first">
                   <h3>retainer service</h3>
                   <p class="paragraph">
                     For engagements longer than 4 weeks, we offer a discount on
@@ -1358,8 +1589,9 @@
                 <img
                   src="/src/assets/images/fast-track-service-img.png"
                   alt="fast track service"
+                  class="extras__paragraph-wrapper--desktop--img"
                 />
-                <div class="extras__paragraph-wrapper">
+                <div class="extras__paragraph-wrapper extras__paragraph-wrapper--desktop extras__paragraph-wrapper--desktop--second">
                   <h3>fast track service</h3>
                   <p class="paragraph">
                     When customers need a project completed urgently, we offer a
@@ -1519,14 +1751,24 @@
               </div>
             </div>
           </div>
-          <a href="index.html"
-            ><img
-              src="/src/assets/images/IDS-img.png"
-              alt="imagine draughting service"
-          /></a>
+          <div class="rotating-logo">
+            <img
+                src="/src/assets/images/IDS-img.png"
+                alt="imagine draughting service"
+                class="body-down-logo"
+            />
+          </div>
         </div>
       </sections>
     </main>
+    <!-- for JS -->
+     <button class="back-to-top-btn" data-visible="false">
+      <img src="/src/assets/icons/scroll-up-icon.svg" alt="arrow up">
+     </button>
+     <a href="#" class="whatsapp-btn" data-active="false"
+     ><img src="/src/assets/icons/whup-icon.svg" alt="whatsapp icon"
+   /></a>
+   <!-------------->
     <footer class="footer">
       <div class="container">
         <div class="footer__container">
@@ -1584,5 +1826,7 @@
         </div>
       </div>
     </footer>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </body>
 </html>

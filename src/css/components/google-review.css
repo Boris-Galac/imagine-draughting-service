@@ -1,6 +1,5 @@
 .reviews {
   position: relative;
-  isolation: isolate;
 }
 .reviews::before {
   content: "";
@@ -38,4 +37,23 @@
 }
 .review__stars {
   margin-bottom: 8px;
+}
+@media (min-width: 1024px) {
+  .reviews::before {
+    width: 108%;
+    object-fit: contain;
+    transform: translate(-49%, -80%);
+    top: -40%;
+    left: 50%;
+  }
+  .reviews__wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .reviews__wrapper > * {
+    flex: 1;
+  }
+  .reviews__wrapper > :nth-child(1) {
+    max-width: 600px;
+  }
 }

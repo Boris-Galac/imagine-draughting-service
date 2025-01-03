@@ -18,5 +18,5 @@
 /*👉 sections */
 /* @import "sections/hero.css"; */
 /*👉 utilities */
-/* @import "utilities/animations.css"; */
+@import "utilities/animations.css";
 @import "utilities/globals.css";
