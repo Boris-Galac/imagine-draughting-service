@@ -137,6 +137,38 @@ galleries.forEach((gallery, index) => {
   slideIntervals.push(interval);
 });
 
+// PLAY THE VIDEO
+
+// PLAY THE VIDEO
+
+const videoBtn = document.querySelector(".play-the-video");
+
+videoBtn.addEventListener("click", () => {
+  // Create the overlay
+  const videoOverlay = document.createElement("div");
+  videoOverlay.classList.add("overlay-play-the-video");
+
+  // Create the video element
+  const video = document.createElement("video");
+  video.src = "/src/assets/balcon-video.mp4";
+  video.controls = true; // Adds playback controls
+  video.autoplay = true; // Starts playback automatically
+
+  // Append the video to the overlay
+  videoOverlay.appendChild(video);
+
+  // Append the overlay to the body
+  document.body.appendChild(videoOverlay);
+
+  // Close the overlay when clicked
+  videoOverlay.addEventListener("click", (event) => {
+    // Ensure we only close when clicking outside the video
+    if (event.target === videoOverlay) {
+      document.body.removeChild(videoOverlay);
+    }
+  });
+});
+
 // STATS COUNT
 
 let valueDisplays = document.querySelectorAll(".count");

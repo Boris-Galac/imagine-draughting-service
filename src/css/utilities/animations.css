@@ -109,3 +109,27 @@
     pointer-events: none;
   }
 }
+.play-the-video {
+  transition: 1s;
+  cursor: pointer;
+}
+.play-the-video:hover {
+  scale: 1.15;
+}
+.overlay-play-the-video {
+  background-color: hsla(0, 0%, 0%, 0.652);
+  display: grid;
+  place-items: center;
+  position: fixed;
+  inset: 0;
+  z-index: 50000;
+  animation: play-the-video 0.6s forwards;
+}
+@keyframes play-the-video {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
