@@ -170,3 +170,13 @@ let observer = new IntersectionObserver(
 valueDisplays.forEach((valueDisplay) => {
   observer.observe(valueDisplay);
 });
+
+// SPLASH SCREEN
+
+document.addEventListener("DOMContentLoaded", () => {
+  const splashScreen = document.querySelector(".splash-screen__overlay");
+
+  setTimeout(() => {
+    splashScreen.classList.add("hidden-overlay");
+  }, 1000); // 4000 milliseconds = 4 seconds
+});

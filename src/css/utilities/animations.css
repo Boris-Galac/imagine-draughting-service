@@ -59,3 +59,52 @@
   transition: all 1.5s ease-in-out;
   opacity: 0;
 }
+/* splash screen */
+
+.splash-screen__overlay {
+  position: fixed;
+  inset: 0;
+  background-color: var(--white);
+  display: grid;
+  place-items: center;
+  z-index: 50000;
+  perspective: 600px;
+}
+.splash-screen__logo {
+  transform: rotateY(60deg);
+  opacity: 0;
+  animation: splash-logo 4s forwards ease;
+}
+@keyframes splash-logo {
+  0%,
+  20% {
+    scale: 2;
+  }
+  80% {
+    opacity: 1;
+    scale: 1;
+    transform: rotateY(0deg);
+  }
+  100% {
+    scale: 3;
+    opacity: 0;
+  }
+}
+.hidden-overlay {
+  opacity: 1;
+  animation: close-overlay 2.5s forwards;
+}
+@keyframes close-overlay {
+  0% {
+    display: grid;
+    opacity: 1;
+  }
+  90% {
+    display: grid;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
