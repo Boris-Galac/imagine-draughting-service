@@ -7,6 +7,7 @@ button {
   width: max-content;
   cursor: pointer;
 }
+
 .btn {
   border: 0;
   text-transform: uppercase;
@@ -194,6 +195,28 @@ button {
     scale: 1;
   }
 }
+.whatsapp-btn .whatsapp-btn__text {
+  display: none;
+}
+.scroll-down-btn {
+  position: absolute;
+  bottom: 42px;
+  right: 16px;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  aspect-ratio: 1;
+  animation: scroll-down-btn 1s ease-in-out alternate infinite;
+}
+@keyframes scroll-down-btn {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(16px);
+  }
+}
+
 @media (min-width: 1024px) {
   .cta--btn-find-out,
   .cta--our-projects {
@@ -233,20 +256,29 @@ button {
   pointer-events: visible;
 }
 .whatsapp-btn {
-  animation: wsup 1.7s infinite ease-in-out alternate;
+  animation: wsup 1s infinite ease-in-out alternate;
+  background-color: var(--green-100);
+  width: max-content;
+  border-radius: 100px;
 }
 @keyframes wsup {
   from {
     scale: 1;
   }
   to {
-    scale: 1.2;
+    scale: 1.07;
   }
 }
 @media (min-width: 1024px) {
   .whatsapp-btn {
     left: 32px;
     bottom: 32px;
+  }
+  .whatsapp-btn span.whatsapp-btn__text {
+    width: max-content;
+    color: var(--white);
+    padding-inline: 16px;
+    display: block;
   }
 }
 .gallery-btn {

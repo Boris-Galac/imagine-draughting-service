@@ -203,12 +203,22 @@ valueDisplays.forEach((valueDisplay) => {
   observer.observe(valueDisplay);
 });
 
-// SPLASH SCREEN
+// SWIPER
 
-document.addEventListener("DOMContentLoaded", () => {
-  const splashScreen = document.querySelector(".splash-screen__overlay");
-
-  setTimeout(() => {
-    splashScreen.classList.add("hidden-overlay");
-  }, 1000); // 4000 milliseconds = 4 seconds
+var swiper = new Swiper(".reviews-swiper", {
+  spaceBetween: 30,
+  effect: "cube",
+  loop: "true",
+  speed: 1000,
+  autoplay: {
+    delay: 2500,
+  },
+  // navigation: {
+  //   nextEl: ".swiper-button-next",
+  //   prevEl: ".swiper-button-prev",
+  // },
+  // pagination: {
+  //   el: ".swiper-pagination",
+  //   clickable: true,
+  // },
 });

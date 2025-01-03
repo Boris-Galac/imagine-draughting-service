@@ -56,9 +56,29 @@
   /* backdrop-filter: blur(2px); */
 }
 .nav__link {
+  position: relative;
   color: var(--white);
   font-weight: 400;
   font-size: clamp(16px, 7vw, 24px);
+  transition: 0.25s;
+}
+.nav__link:hover {
+  filter: drop-shadow(0 0 10px white);
+}
+.nav__link::after {
+  content: "";
+  position: absolute;
+  background-color: var(--white);
+  height: 1px;
+  width: 100%;
+  display: block;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s;
+}
+.nav__link:hover::after {
+  transform-origin: left;
+  transform: scaleX(1);
 }
 .header__logo {
   width: 35vw;
@@ -83,21 +103,69 @@
 .header--mobile.active {
   box-shadow: 0px 13px 20px 0px rgba(0, 23, 52, 0.2);
 }
-.header--desktop.active {
-  position: fixed;
-  left: 0;
-  right: 0;
-  z-index: 50;
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.705) 95%,
-    transparent 100%
-  );
-  backdrop-filter: blur(7px);
-  box-shadow: 0px 13px 20px 0px rgba(0, 23, 52, 0.2);
-}
+
 @media (min-width: 1024px) {
   .header__logo {
     z-index: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .ham .header__logo {
+    z-index: 0;
+  }
+  .nav {
+    position: relative;
+  }
+  .nav[aria-expanded="false"] {
+    animation: unset !important;
+  }
+  @keyframes nav-closed {
+    from {
+      clip-path: circle(141.4% at 0 0);
+      opacity: 1;
+      pointer-events: visible;
+    }
+    to {
+      clip-path: circle(0% at 0 0);
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+  .ham-btn--desktop {
+    display: none !important;
+  }
+  .nav--desktop .nav__list {
+    display: flex;
+  }
+  .nav {
+    position: static;
+    inset: 0;
+    backdrop-filter: blur(7px);
+    background-color: hsla(222, 100%, 57%, 0.9);
+    display: grid;
+    place-content: center;
+    height: 0;
+    z-index: 1000;
+  }
+  .nav .nav__link {
+    color: var(--white);
+    font-size: 16px;
+    width: max-content;
+  }
+  .header--desktop {
+    background-color: var(--primary-clr);
+  }
+  .header--desktop.active {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 50000;
+    background-color: hsla(330, 2%, 20%, 0.75);
+    backdrop-filter: blur(7px);
+    box-shadow: 0px 13px 20px 0px rgba(0, 23, 52, 0.2);
+    width: 100%;
+  }
+  .header--desktop.active .nav__list {
+    gap: 8vh;
   }
 }

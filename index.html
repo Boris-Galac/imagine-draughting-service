@@ -12,7 +12,6 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="/src/css/style.css" />
-
     <script defer src="/src/js/main.js"></script>
   </head>
   <body>
@@ -55,47 +54,47 @@
       /></a>
     </header>
     <main class="main">
+      <header class="header header--desktop">
+        <button
+          class="ham-btn ham-btn--desktop"
+          aria-label="ham button"
+          tabindex="0"
+          aria-controls="nav"
+          data-active="false"
+        >
+          <div class="ham-btn-line"></div>
+          <div class="ham-btn-line"></div>
+          <div class="ham-btn-line"></div>
+        </button>
+        <nav class="nav nav--desktop" aria-expanded="false">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#" class="nav__link">Home</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Services</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Our team</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Blog</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">About us</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <a class="header__logo header__logo-desktop" href="#"
+          ><img src="/src/assets/images/footer-logo.png" alt="logo image"
+        /></a>
+      </header>
       <!-- 👉 HERO section -->
       <section class="hero">
         <div class="hero__wrapper">
-          <header class="header header--desktop">
-            <button
-              class="ham-btn ham-btn--desktop"
-              aria-label="ham button"
-              tabindex="0"
-              aria-controls="nav"
-              data-active="false"
-            >
-              <div class="ham-btn-line"></div>
-              <div class="ham-btn-line"></div>
-              <div class="ham-btn-line"></div>
-            </button>
-            <nav class="nav nav--desktop" aria-expanded="false">
-              <ul class="nav__list">
-                <li class="nav__item">
-                  <a href="#" class="nav__link">Home</a>
-                </li>
-                <li class="nav__item">
-                  <a href="#" class="nav__link">Services</a>
-                </li>
-                <li class="nav__item">
-                  <a href="#" class="nav__link">Our team</a>
-                </li>
-                <li class="nav__item">
-                  <a href="#" class="nav__link">Blog</a>
-                </li>
-                <li class="nav__item">
-                  <a href="#" class="nav__link">About us</a>
-                </li>
-                <li class="nav__item">
-                  <a href="#" class="nav__link">Contact</a>
-                </li>
-              </ul>
-            </nav>
-            <a class="header__logo header__logo-desktop" href="#"
-              ><img src="/src/assets/images/footer-logo.png" alt="logo image"
-            /></a>
-          </header>
           <div class="hero__content-wrapper">
             <figure class="hero__credits">
               <img
@@ -178,11 +177,12 @@
                   src="/src/assets/icons/hero-phone-icon.svg"
                   alt="phone"
                 />
-                01253543259</a
+                012535 43259</a
               >
             </div>
             <a href="#about" class="scroll-down-btn"
               ><img
+              class="icon"
                 src="/src/assets/icons/scroll-down-icon.svg"
                 alt="scroll down"
             /></a>
@@ -192,23 +192,23 @@
           <div class="hero-visual__box">
             <div class="gallery">
               <img
-                src="/src/assets/images/hero-slider/slider-1-img-1.jpg"
+                src="/src/assets/images/hero-slider/img-1.jpg"
                 class="slide-img current"
               />
               <img
-                src="/src/assets/images/hero-slider/slider-1-img-2.jpg"
+                src="/src/assets/images/hero-slider/img-2.jpg"
                 class="slide-img"
               />
               <img
-                src="/src/assets/images/hero-slider/slider-1-img-3.jpg"
+                src="/src/assets/images/hero-slider/img-3.jpeg"
                 class="slide-img"
               />
               <img
-                src="/src/assets/images/hero-slider/slider-1-img-4.jpg"
+                src="/src/assets/images/hero-slider/img-4.jpeg"
                 class="slide-img"
               />
               <img
-                src="/src/assets/images/hero-slider/slider-1-img-5.jpg"
+                src="/src/assets/images/hero-slider/img-5.jpeg"
                 class="slide-img"
               />
             </div>
@@ -217,7 +217,7 @@
             <img src="/src/assets/images/hero-slider/hero-visual-google-reviews.svg" alt="google reviews">
           </div>
           <div class="hero-visual__box">
-            <img src="/src/assets/images/hero-slider/2013-visual.svg" alt="since 2013">
+            <img src="/src/assets/images/hero-slider/uk-innovate.svg" alt="UK innovate">
           </div>
           <div class="hero-visual__box">
             <img src="/src/assets/images/hero-slider/500+.svg" alt="500+ satisfied clients">
@@ -229,48 +229,47 @@
           <div class="hero-visual__box">
             <div class="gallery">
               <img
-              src="/src/assets/images/hero-slider/slider-2-img-1.jpg"
+              src="/src/assets/images/hero-slider/img-6.jpeg"
               class="slide-img current"
             />
             <img
-              src="/src/assets/images/hero-slider/slider-2-img-2.jpg"
+              src="/src/assets/images/hero-slider/img-7.jpg"
               class="slide-img"
             />
             <img
-              src="/src/assets/images/hero-slider/slider-2-img-3.jpg"
+              src="/src/assets/images/hero-slider/img-8.jpeg"
               class="slide-img"
             />
             <img
-              src="/src/assets/images/hero-slider/slider-2-img-4.jpg"
+              src="/src/assets/images/hero-slider/img-9.jpeg"
               class="slide-img"
             />
             <img
-              src="/src/assets/images/hero-slider/slider-2-img-5.jpg"
+              src="/src/assets/images/hero-slider/img-10.jpeg"
               class="slide-img"
             />
-
             </div>
           </div>
           <div class="hero-visual__box">
             <div class="gallery">
               <img
-              src="/src/assets/images/hero-slider/slider-3-img-1.jpg"
+              src="/src/assets/images/hero-slider/img-11.jpeg"
               class="slide-img current"
             />
             <img
-              src="/src/assets/images/hero-slider/slider-3-img-2.jpg"
+              src="/src/assets/images/hero-slider/img-12.png"
               class="slide-img"
             />
             <img
-              src="/src/assets/images/hero-slider/slider-3-img-3.jpg"
+              src="/src/assets/images/hero-slider/img-13.jpeg"
               class="slide-img"
             />
             <img
-              src="/src/assets/images/hero-slider/slider-3-img-4.jpg"
+              src="/src/assets/images/hero-slider/img-14.jpeg"
               class="slide-img"
             />
             <img
-              src="/src/assets/images/hero-slider/slider-3-img-5.jpg"
+              src="/src/assets/images/hero-slider/img-15.jpg"
               class="slide-img"
             />
 
@@ -292,23 +291,23 @@
           <div class="hero-visual__box">
             <div class="gallery">
               <img
-              src="/src/assets/images/hero-slider/slider-4-img-1.jpg"
+              src="/src/assets/images/hero-slider/img-16.jpg"
               class="slide-img current"
             />
             <img
-              src="/src/assets/images/hero-slider/slider-4-img-2.jpg"
+              src="/src/assets/images/hero-slider/img-17.jpg"
               class="slide-img"
             />
             <img
-              src="/src/assets/images/hero-slider/slider-4-img-3.jpg"
+              src="/src/assets/images/hero-slider/img-18.jpg"
               class="slide-img"
             />
             <img
-              src="/src/assets/images/hero-slider/slider-4-img-4.jpg"
+              src="/src/assets/images/hero-slider/img-19.jpg"
               class="slide-img"
             />
             <img
-              src="/src/assets/images/hero-slider/slider-4-img-5.jpg"
+              src="/src/assets/images/hero-slider/img-20.jpg"
               class="slide-img"
             />
 
@@ -350,17 +349,17 @@
                 </div>
               </div>
               <div class="about-us__row">
-                <img
-                  src="/src/assets/images/who-we-are-thumbnail.png"
-                  alt="3d window visualisation"
-                  class="play-the-video"
-                />
+                <img src="/src/assets/icons/about-us-video-play-icon.svg" alt="play icon">
+                <video class="play-the-video" src="/src/assets/balcon-video.mp4" muted autoplay loop></video>
               </div>
             </div>
             <div class="reviews">
               <h3 class="h3-heading">google reviews</h3>
               <div class="reviews__wrapper">
-                <article class="review">
+                  <!-- Swiper -->
+  <div class="swiper reviews-swiper">
+    <div class="swiper-wrapper">
+                <article class="review swiper-slide">
                   <div class="review__header">
                     <div class="review__col">
                       <img
@@ -393,8 +392,163 @@
                     produced from my hand sketches and turned around in a timely
                     manner, excellent service provided.
                   </p>
+                </article>                
+                <article class="review swiper-slide">
+                  <div class="review__header">
+                    <div class="review__col">
+                      <img
+                        src="/src/assets/images/Frame 687.svg"
+                        alt="avatar image"
+                        class="img-contain"
+                      />
+                      <div class="review__info-wrapper">
+                        <div class="review__name">Guy Cook</div>
+                        <div class="review__date">12 october 2023</div>
+                      </div>
+                    </div>
+                    <div class="review__col">
+                      <img
+                        src="/src/assets/icons/google-reviw-icon.png"
+                        alt="google icon"
+                      />
+                    </div>
+                  </div>
+                  <div class="review__stars">
+                    <img
+                      src="/src/assets/images/google-review-stars-illustration.png"
+                      alt="review stars"
+                    />
+                  </div>
+                  <p class="body-paragraph">
+                    From start to finish, the service was brilliant. My designer Alex was patient, professional and went above and beyond to get my project going. I can’t recommend Imagine Draughting Services enough. I will 100% be using their services again on my future projects.
+                  </p>
                 </article>
-                <div class="google-review__counts">
+                <article class="review swiper-slide">
+                  <div class="review__header">
+                    <div class="review__col">
+                      <img
+                        src="/src/assets/images/Frame 688.png"
+                        alt="avatar image"
+                        class="img-contain"
+                      />
+                      <div class="review__info-wrapper">
+                        <div class="review__name">Andy Spencer</div>
+                        <div class="review__date">8 february 2023</div>
+                      </div>
+                    </div>
+                    <div class="review__col">
+                      <img
+                        src="/src/assets/icons/google-reviw-icon.png"
+                        alt="google icon"
+                      />
+                    </div>
+                  </div>
+                  <div class="review__stars">
+                    <img
+                      src="/src/assets/images/google-review-stars-illustration.png"
+                      alt="review stars"
+                    />
+                  </div>
+                  <p class="body-paragraph">
+                    I used Ryan and his team recently to help design a plant room layout we needed for an upcoming project, excellent service and communication throughout the process. Boni, who drew up our design was brillaint, highly reccomend!
+                  </p>
+                </article>
+                <article class="review swiper-slide">
+                  <div class="review__header">
+                    <div class="review__col">
+                      <img
+                        src="/src/assets/images/Frame 689.svg"
+                        alt="avatar image"
+                        class="img-contain"
+                      />
+                      <div class="review__info-wrapper">
+                        <div class="review__name">Steve Warren</div>
+                        <div class="review__date">21 september 2023</div>
+                      </div>
+                    </div>
+                    <div class="review__col">
+                      <img
+                        src="/src/assets/icons/google-reviw-icon.png"
+                        alt="google icon"
+                      />
+                    </div>
+                  </div>
+                  <div class="review__stars">
+                    <img
+                      src="/src/assets/images/google-review-stars-illustration.png"
+                      alt="review stars"
+                    />
+                  </div>
+                  <p class="body-paragraph">
+                    Very quick turn around, value for money and an all round good service, they will hopefully be long term suppliers!
+                  </p>
+                </article>
+                <article class="review swiper-slide">
+                  <div class="review__header">
+                    <div class="review__col">
+                      <img
+                        src="/src/assets/images/Frame 689 (1).svg"
+                        alt="avatar image"
+                        class="img-contain"
+                      />
+                      <div class="review__info-wrapper">
+                        <div class="review__name">Jane Lucas</div>
+                        <div class="review__date">18 march 2023</div>
+                      </div>
+                    </div>
+                    <div class="review__col">
+                      <img
+                        src="/src/assets/icons/google-reviw-icon.png"
+                        alt="google icon"
+                      />
+                    </div>
+                  </div>
+                  <div class="review__stars">
+                    <img
+                      src="/src/assets/images/google-review-stars-illustration.png"
+                      alt="review stars"
+                    />
+                  </div>
+                  <p class="body-paragraph">
+                    This was our 3rd or 4th time using Imagine Draughting Services and the service was great as usual. Boni produced perfect drawings within a day, and our various amendments were made within hours. Very happy customers.
+                  </p>
+                </article>
+                <article class="review swiper-slide">
+                  <div class="review__header">
+                    <div class="review__col">
+                      <img
+                        src="/src/assets/images/Frame 6.svg"
+                        alt="avatar image"
+                        class="img-contain"
+                      />
+                      <div class="review__info-wrapper">
+                        <div class="review__name">Zoe White</div>
+                        <div class="review__date">9 january 2022</div>
+                      </div>
+                    </div>
+                    <div class="review__col">
+                      <img
+                        src="/src/assets/icons/google-reviw-icon.png"
+                        alt="google icon"
+                      />
+                    </div>
+                  </div>
+                  <div class="review__stars">
+                    <img
+                      src="/src/assets/images/google-review-stars-illustration.png"
+                      alt="review stars"
+                    />
+                  </div>
+                  <p class="body-paragraph">
+                    Brilliant service received by Ryan and Mark. They were really professional, helpful, quick and very responsive to changes i needed when navigating this area of submitting planning permission for my commercial property.
+                  </p>
+                </article>
+    </div>
+    <!-- <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div> -->
+  </div>
+                <a href="https://tinyurl.com/y5ckf7da" target="_blank" class="google-review__counts">
                   <div class="google-review__row">
                     <div class="google-review__google">
                       <img
@@ -402,6 +556,9 @@
                         alt="google"
                       />
                       Google
+                    </div>
+                    <div class="google-review__stars-box">
+                      <img src="/src/assets/images/google-review-stars-illustration.png" alt="">
                     </div>
                     <div class="google-review__link">
                       <img
@@ -415,7 +572,7 @@
                     <div class="google-review__counts-box">5/5 stars</div>
                     <div class="google-review__reviews-box">80 reviews</div>
                   </div>
-                </div>
+                </a>
               </div>
             </div>
           </div>
@@ -1768,10 +1925,9 @@
      </button>
      <a href="https://wa.me/201253543259" target="_blank" class="whatsapp-btn" data-active="false"
      ><img src="/src/assets/icons/whup-icon.svg" alt="whatsapp icon"
-   /></a>
-   <div class="splash-screen__overlay">
-    <img class="splash-screen__logo" src="/src/assets/images/footer-logo.png" alt="logo">
-   </div>
+   />
+   <span class="whatsapp-btn__text">WhatsApp for Free Quotation</span>
+  </a>
    <!-------------->
     <footer class="footer">
       <div class="container">
