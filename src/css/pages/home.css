@@ -778,6 +778,9 @@
   gap: 32px;
   margin-bottom: 96px;
 }
+.blog__wrapper > p {
+  margin-bottom: 32px;
+}
 /* HIRE-US section */
 .hire-us {
   position: relative;
