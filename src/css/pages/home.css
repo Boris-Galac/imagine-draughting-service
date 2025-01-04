@@ -87,6 +87,10 @@
   margin-inline: auto;
   margin-left: 95px;
 }
+.hero-visual__box--google-reviews {
+  cursor: pointer;
+}
+
 .hero__footer-contact a {
   display: flex;
   align-items: center;
