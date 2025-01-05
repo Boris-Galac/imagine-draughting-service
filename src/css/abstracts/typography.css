@@ -34,8 +34,11 @@ p {
   font-weight: 300;
   font-size: 14px;
 }
-.hero__subheadline > * {
-  width: min(100%, 600px);
+.hero__subheadline {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 .hero-headline--mobile {
   display: block;
@@ -44,7 +47,6 @@ p {
 .hero-headline--desktop {
   display: none;
 }
-
 .h2-heading {
   position: relative;
   text-transform: uppercase;

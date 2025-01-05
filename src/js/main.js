@@ -1,7 +1,7 @@
 // HAM BTN and HEADER
 
 const hamBtn = document.querySelector(".ham-btn");
-const hamBtnDesktop = document.querySelector(".ham-btn--desktop");
+// const hamBtnDesktop = document.querySelector(".ham-btn--desktop");
 
 const primaryNav = document.querySelector(".nav");
 const navDesktop = document.querySelector(".nav--desktop");
@@ -15,17 +15,6 @@ hamBtn.addEventListener("click", (e) => {
     } else {
       primaryNav.setAttribute("aria-expanded", "false");
       hamBtn.setAttribute("data-active", "false");
-    }
-  }
-});
-hamBtnDesktop.addEventListener("click", (e) => {
-  if (navDesktop) {
-    if (navDesktop.getAttribute("aria-expanded") === "false") {
-      navDesktop.setAttribute("aria-expanded", "true");
-      hamBtnDesktop.setAttribute("data-active", "true");
-    } else {
-      navDesktop.setAttribute("aria-expanded", "false");
-      hamBtnDesktop.setAttribute("data-active", "false");
     }
   }
 });
@@ -93,7 +82,6 @@ const nextSlide = (gallery) => {
       gallery.querySelector(".slide-img").classList.add("current");
     }
   } else {
-    console.warn("No .current found. Initializing the first slide.");
     gallery.querySelector(".slide-img").classList.add("current");
   }
 };
@@ -113,7 +101,6 @@ const prevSlide = (gallery) => {
         );
     }
   } else {
-    console.warn("No .current found. Initializing the last slide.");
     gallery
       .querySelectorAll(".slide-img")
       [gallery.querySelectorAll(".slide-img").length - 1].classList.add(
@@ -123,13 +110,8 @@ const prevSlide = (gallery) => {
 };
 
 galleries.forEach((gallery, index) => {
-  console.log(`Initializing gallery ${index + 1}`);
-
   const initialSlide = gallery.querySelector(".slide-img.current");
   if (!initialSlide) {
-    console.warn(
-      `No .current found in gallery ${index + 1}. Assigning default.`
-    );
     gallery.querySelector(".slide-img").classList.add("current");
   }
 
@@ -139,30 +121,22 @@ galleries.forEach((gallery, index) => {
 
 // PLAY THE VIDEO
 
-// PLAY THE VIDEO
-
 const videoBtn = document.querySelector(".play-the-video");
 
 videoBtn.addEventListener("click", () => {
-  // Create the overlay
   const videoOverlay = document.createElement("div");
   videoOverlay.classList.add("overlay-play-the-video");
 
-  // Create the video element
   const video = document.createElement("video");
   video.src = "/src/assets/balcon-video.mp4";
-  video.controls = true; // Adds playback controls
-  video.autoplay = true; // Starts playback automatically
+  video.controls = true;
+  video.autoplay = true;
 
-  // Append the video to the overlay
   videoOverlay.appendChild(video);
 
-  // Append the overlay to the body
   document.body.appendChild(videoOverlay);
 
-  // Close the overlay when clicked
   videoOverlay.addEventListener("click", (event) => {
-    // Ensure we only close when clicking outside the video
     if (event.target === videoOverlay) {
       document.body.removeChild(videoOverlay);
     }
