@@ -170,12 +170,42 @@ let observer = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.1 }
+  { threshold: 0.2 }
 ); // Trigger when 10% of the element is visible
 
 valueDisplays.forEach((valueDisplay) => {
   observer.observe(valueDisplay);
 });
+///////// INTERSECTION OBSERVER
+
+// from left stagger
+
+const observere = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+      }
+      //  else {
+      //   entry.target.classList.remove("active");
+      // }
+    });
+  },
+  { threshold: 0.2 }
+);
+
+// left
+const left = document.querySelectorAll(".hidden-left");
+left.forEach((el) => observere.observe(el));
+// right
+const right = document.querySelectorAll(".hidden-right");
+right.forEach((el) => observere.observe(el));
+// bottom
+const fade = document.querySelectorAll(".hidden-fade");
+fade.forEach((el) => observere.observe(el));
+// clippy circle
+const clippyCircle = document.querySelectorAll(".circle-clip-animation");
+clippyCircle.forEach((el) => observere.observe(el));
 
 // SWIPER
 
@@ -195,4 +225,49 @@ var swiper = new Swiper(".reviews-swiper", {
   //   el: ".swiper-pagination",
   //   clickable: true,
   // },
+});
+
+// GSAP
+
+// gsap.registerPlugin(ScrollTrigger);
+// gsap.to(".service-card", {
+//   opacity: 1,
+//   x: 100,
+//   stagger: 0.2,
+// });
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.from(".service-card", {
+  opacity: 0,
+  x: -50,
+  duration: 1,
+  stagger: 0.3,
+  scrollTrigger: {
+    trigger: ".service-card",
+    start: "top 90%",
+    // markers: true,
+  },
+});
+gsap.from(".dream-team-card", {
+  opacity: 0,
+  y: 50,
+  duration: 1,
+  stagger: 0.3,
+  scrollTrigger: {
+    trigger: ".dream-team-card",
+    start: "top 90%",
+    // markers: true,
+  },
+});
+gsap.from(".blog-article", {
+  opacity: 0,
+  x: -50,
+  duration: 1,
+  stagger: 0.3,
+  scrollTrigger: {
+    trigger: ".blog-article",
+    start: "top 90%",
+    // markers: true,
+  },
 });

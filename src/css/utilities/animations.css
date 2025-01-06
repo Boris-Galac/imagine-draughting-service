@@ -4,7 +4,7 @@
   transform: translateX(-50%);
 }
 .hidden-left.active {
-  animation: left forwards 0.8s ease-out;
+  animation: left forwards 1.2s ease-out;
 }
 @keyframes left {
   from {
@@ -20,7 +20,7 @@
   transform: translateX(50%);
 }
 .hidden-right.active {
-  animation: right forwards 0.8s ease-out;
+  animation: right forwards 1.2s ease-out;
 }
 @keyframes right {
   from {
@@ -43,6 +43,21 @@
   }
   to {
     opacity: 1;
+  }
+}
+.circle-clip-animation {
+  opacity: 0;
+}
+.circle-clip-animation.active {
+  animation: clippy 2s forwards ease-out;
+}
+@keyframes clippy {
+  from {
+    clip-path: circle(0% at 50% 50%);
+  }
+  to {
+    opacity: 1;
+    clip-path: circle(70.7% at 50% 50%);
   }
 }
 
@@ -143,12 +158,14 @@
   height: 100%;
 }
 
-/* .swiper-slide {
-  text-align: left;
-  font-size: 18px;
-  background: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-} */
+.hero-visual-box--animation {
+  clip-path: polygon(0 0, 100% 0, 0 0, 0% 100%);
+  opacity: 0;
+  animation: visual-box 1.5s forwards;
+}
+@keyframes visual-box {
+  to {
+    opacity: 1;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}

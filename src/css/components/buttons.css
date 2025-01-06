@@ -157,6 +157,7 @@ button {
   text-transform: capitalize;
   font-weight: 400;
   gap: 8px;
+  transition: 0.25s;
 }
 .see-all-blogs-btn {
   color: var(--white);
@@ -216,14 +217,6 @@ button {
     transform: translateY(16px);
   }
 }
-
-@media (min-width: 1024px) {
-  .cta--btn-find-out,
-  .cta--our-projects {
-    padding-block: 16px;
-    gap: 16px;
-  }
-}
 /* back to top */
 .back-to-top-btn {
   background-color: var(--black);
@@ -280,6 +273,19 @@ button {
     padding-inline: 16px;
     display: block;
   }
+  .service-card-btn {
+    margin-block-start: auto;
+    transition: 0.25s;
+    border-radius: 100px;
+  }
+  .service-card-btn:hover {
+    background-color: rgba(255, 255, 255, 0.177);
+  }
+  .cta--btn-find-out,
+  .cta--our-projects {
+    padding-block: 16px;
+    gap: 16px;
+  }
 }
 .gallery-btn {
   outline-color: var(--white);
@@ -289,4 +295,8 @@ button {
 }
 .gallery-btn:hover {
   background-color: var(--primary-clr);
+}
+.contact-now-btn:hover {
+  scale: 1.06;
+  cursor: pointer;
 }

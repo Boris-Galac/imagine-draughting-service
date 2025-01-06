@@ -39,6 +39,26 @@ p {
   display: flex;
   align-items: center;
   gap: 8px;
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: subheadline 2s forwards ease;
+}
+@keyframes subheadline {
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+.hero__headline {
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: headline 2s forwards ease;
+}
+@keyframes headline {
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
 }
 .hero-headline--mobile {
   display: block;
@@ -232,5 +252,10 @@ p {
   }
   .h2-heading[data-h2-heading] {
     margin-bottom: 108px;
+  }
+  .about-us__row .body-paragraph {
+    font-size: 20px;
+    margin-bottom: 32px;
+    max-width: 60ch;
   }
 }

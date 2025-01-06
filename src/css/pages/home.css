@@ -19,6 +19,15 @@
 .hero__credits {
   margin-bottom: 1rem;
   max-width: 700px;
+  transform: translateX(-100%);
+  opacity: 0;
+  animation: hero-credits 2s forwards ease;
+}
+@keyframes hero-credits {
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
 }
 .hero__content-wrapper {
   grid-row: 2;
@@ -538,8 +547,8 @@
 }
 /* SERVICES section */
 .services {
-  /* clip-path: polygon(0 1%, 100% 0, 100% 99%, 0% 100%); */
   padding-block: 9rem;
+  z-index: 500;
 }
 .services__overlay {
   position: absolute;
@@ -603,6 +612,7 @@
     top: -162px;
     height: 840px;
     bottom: -280px;
+    z-index: 499;
   }
 }
 /* COMPANY section */
