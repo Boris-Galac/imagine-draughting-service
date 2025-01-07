@@ -816,6 +816,7 @@
   }
   .extras__row > img {
     border-radius: 7px;
+    width: 65%;
   }
   .extras__wrapper {
     display: flex;

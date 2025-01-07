@@ -211,7 +211,7 @@ clippyCircle.forEach((el) => observere.observe(el));
 
 var swiper = new Swiper(".reviews-swiper", {
   spaceBetween: 30,
-  effect: "cube",
+  effect: "fade",
   loop: "true",
   speed: 1000,
   autoplay: {
@@ -226,15 +226,6 @@ var swiper = new Swiper(".reviews-swiper", {
   //   clickable: true,
   // },
 });
-
-// GSAP
-
-// gsap.registerPlugin(ScrollTrigger);
-// gsap.to(".service-card", {
-//   opacity: 1,
-//   x: 100,
-//   stagger: 0.2,
-// });
 
 gsap.registerPlugin(ScrollTrigger);
 
