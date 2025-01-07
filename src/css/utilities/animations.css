@@ -169,3 +169,9 @@
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   }
 }
+@media (min-width: 1200px) {
+  .play-the-video {
+    margin-inline: unset;
+    margin-left: auto;
+  }
+}
