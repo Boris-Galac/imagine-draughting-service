@@ -249,6 +249,7 @@ p {
     text-transform: uppercase;
     font-weight: 400;
     font-size: 58px;
+    line-height: 95%;
   }
   .h2-heading[data-h2-heading] {
     margin-bottom: 108px;

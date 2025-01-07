@@ -92,6 +92,12 @@
   width: 100%;
   display: none;
 }
+.header--mobile .header__logo {
+  width: max-content;
+}
+.header--mobile .header__logo img {
+  max-width: 140px;
+}
 .header--mobile {
   position: fixed;
   background: linear-gradient(
