@@ -732,6 +732,7 @@
 .dream-team__wrapper > img:last-child {
   margin-inline: auto;
 }
+
 @media (min-width: 1200px) {
   .dream-team__inner-wrapper {
     display: flex;
