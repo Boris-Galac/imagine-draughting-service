@@ -80,8 +80,13 @@
 .dream-team__designer-work img {
   width: 100%;
   height: 100%;
-  aspect-ratio: 200px;
   object-fit: contain;
+}
+.dream-team__designer-work--brazeau li {
+  width: 320px;
+}
+.dream-team__designer-work--mani li {
+  width: 250px;
 }
 .dream-team-card__name,
 .dream-team-card__expertise {
