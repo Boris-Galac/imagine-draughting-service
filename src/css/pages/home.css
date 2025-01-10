@@ -583,6 +583,7 @@
   background: url("/src/assets/images/service-overlay-graphic.png") no-repeat
     center center/cover;
   inset: 0;
+  background-attachment: fixed;
   height: 100%;
   width: 100%;
   opacity: 0.05;

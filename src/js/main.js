@@ -207,7 +207,7 @@ fade.forEach((el) => observere.observe(el));
 const clippyCircle = document.querySelectorAll(".circle-clip-animation");
 clippyCircle.forEach((el) => observere.observe(el));
 
-// SWIPER
+//////// SWIPER
 
 var swiper = new Swiper(".reviews-swiper", {
   spaceBetween: 30,
@@ -226,6 +226,8 @@ var swiper = new Swiper(".reviews-swiper", {
   //   clickable: true,
   // },
 });
+
+/////// GSAP
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -260,5 +262,29 @@ gsap.from(".blog-article", {
     trigger: ".blog-article",
     start: "top 90%",
     // markers: true,
+  },
+});
+gsap.from(".services__overlay::after", {
+  opacity: 0,
+  x: -50,
+  duration: 1,
+  stagger: 0.3,
+  scrollTrigger: {
+    trigger: ".services__overlay::after",
+    start: "top 90%",
+    // markers: true,
+  },
+});
+
+gsap.to(".services__overlay::after", {
+  y: 700,
+  duration: 4,
+  scrollTrigger: {
+    scrub: 1,
+    trigger: ".services__overlay::after",
+    toggleActions: "restart none none none", ///  1. onEnter 2. onLeave  3. onEnterBack  4. onLeaveBack
+    start: "top 70%",
+    end: "top 25%",
+    markers: true,
   },
 });
