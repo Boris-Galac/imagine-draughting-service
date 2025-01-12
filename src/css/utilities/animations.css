@@ -173,5 +173,7 @@
   .play-the-video {
     margin-inline: unset;
     margin-left: auto;
+    width: 100%;
+    aspect-ratio: 4/4;
   }
 }
