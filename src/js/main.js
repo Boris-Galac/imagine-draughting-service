@@ -285,6 +285,6 @@ gsap.to(".services__overlay::after", {
     toggleActions: "restart none none none", ///  1. onEnter 2. onLeave  3. onEnterBack  4. onLeaveBack
     start: "top 70%",
     end: "top 25%",
-    markers: true,
+    // markers: true,
   },
 });
