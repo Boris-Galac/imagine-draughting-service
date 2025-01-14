@@ -45,8 +45,6 @@
   padding-inline: 16px;
 }
 .dream-team-card__back {
-  /* display: grid;
-  place-items: center; */
   height: 100%;
   transform: rotateY(180deg);
 }
@@ -65,13 +63,14 @@
   mix-blend-mode: color-burn;
   z-index: -1;
 }
-.dream-team-card__back ul {
-}
 .dream-team__designer-work {
   height: 100%;
   width: 100%;
   display: flex;
   padding-block: 16px;
+}
+.dream-team__designer-work--alex-1 {
+  width: 269px !important;
 }
 .dream-team__designer-work li {
   width: 200px;
