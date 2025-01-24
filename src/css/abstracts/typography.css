@@ -113,6 +113,16 @@ p {
   color: var(--paragraph-clr);
   margin-bottom: 1rem;
 }
+.card-heading {
+  color: var(--white);
+  font-weight: 300;
+  font-size: 24px;
+}
+.card-paragraph {
+  color: var(--white);
+  font-weight: 100;
+  line-height: 160%;
+}
 .h3-heading {
   color: var(--dark-200);
   text-transform: uppercase;
@@ -178,6 +188,26 @@ p {
 }
 .dream-team .h2-heading > img:nth-child(1) {
   display: none;
+}
+.page-banner-heading {
+  position: relative;
+  color: var(--white);
+  font-weight: 400;
+  font-size: clamp(2rem, 7vw, 4rem);
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  left: 6vw;
+}
+.page-banner-heading::before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 40%;
+  background-color: var(--white);
+  bottom: 0;
+  left: 0;
+  display: block;
 }
 @media (min-width: 768px) {
   .dream-team .h2-heading > img:nth-child(2) {

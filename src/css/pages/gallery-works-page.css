@@ -1,0 +1,39 @@
+.gallery-works-main {
+  background-color: var(--black);
+}
+.gallery-black-overlay {
+  background-color: var(--black);
+  position: fixed;
+  inset: 0;
+  z-index: -5;
+}
+.gallery-works-page-section {
+}
+.gallery-works-main .page-banner {
+  background: linear-gradient(to right, #2f2926, #626262);
+}
+.gallery-works-page__container {
+}
+.gallery-works-wrapper {
+}
+.gallery-works-inner-wrapper {
+  columns: 150px;
+  gap: 0;
+}
+.gallery-works-inner-wrapper a {
+  transition: 0.28s;
+}
+.gallery-works-inner-wrapper a:hover {
+  scale: 1.5;
+}
+.gallery-works-main .page-overlay {
+  opacity: 0.1;
+}
+.gallery-works-main .page-h2-heading,
+.gallery-works-main .page-subheading,
+.gallery-works-main p {
+  color: var(--white);
+}
+.gallery-works-main .page-subheading {
+  font-weight: 100;
+}

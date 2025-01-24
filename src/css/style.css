@@ -11,10 +11,19 @@
 @import "components/blog-article.css";
 @import "components/associations-card.css";
 @import "components/dream-team-card.css";
+@import "components/team-card.css";
+@import "components/project-card.css";
+@import "components/testimonial-card.css";
+@import "components/page-banner.css";
 @import "components/footer.css";
 /*👉 pages */
+@import "pages/page.css";
 @import "pages/home.css";
-/* @import "pages/gallery.css"; */
+@import "pages/team-page.css";
+@import "pages/about-us-page.css";
+@import "pages/recent-projects-page.css";
+@import "pages/testimonials-page.css";
+@import "pages/gallery-works-page.css";
 /*👉 sections */
 /* @import "sections/hero.css"; */
 /*👉 utilities */

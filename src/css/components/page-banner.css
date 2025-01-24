@@ -1,0 +1,22 @@
+.page-banner {
+  position: relative;
+  isolation: isolate;
+  height: 27vh;
+  background: linear-gradient(to right, #151f2e, #436394);
+  box-shadow: 0 20px 40px rgba(46, 56, 76, 0.644);
+}
+.page-banner::before {
+  content: "";
+  position: absolute;
+  background: url("/src/assets/images/banner-logo-overlay.png") no-repeat center
+    center/contain;
+  inset: 0;
+  z-index: -1;
+}
+.page-banner-img {
+  width: 10vh;
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  right: 12vw;
+}

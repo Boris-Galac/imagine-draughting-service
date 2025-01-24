@@ -1,0 +1,23 @@
+.team-main {
+  position: relative;
+  isolation: isolate;
+}
+
+.team-section {
+}
+
+.team__container .page-heading-wrapper {
+  margin-bottom: 120px;
+}
+.team-wrapper,
+.about-us-page-wrapper {
+  background-color: hsla(213, 77%, 88%, 0.778);
+  padding: 16px;
+  border-radius: 4px;
+  box-shadow: 0 44px 114px rgba(0, 0, 0, 0.243);
+}
+.team-inner-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 80px;
+}

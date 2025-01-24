@@ -1,0 +1,13 @@
+.projects-main {
+}
+.projects-main .page-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.46);
+  z-index: -3;
+}
+.projects-inner-wrapper {
+  display: grid;
+  gap: 32px;
+}

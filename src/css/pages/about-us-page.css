@@ -1,0 +1,41 @@
+.about-us-page-section {
+}
+.about-us-page__container {
+}
+.about-us-page-wrapper {
+  padding-top: 100px;
+}
+.page-heading-wrapper {
+}
+.about-us-page-inner-wrapper {
+  margin-bottom: 48px;
+}
+.about-us-page__container {
+  position: relative;
+}
+.who-we-are-top-img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 5vh;
+}
+.get-in-touch__contact {
+  aspect-ratio: 1;
+}
+.about-us-page__get-in-touch {
+  background-color: #ffffff58;
+  padding: 16px;
+  border-radius: 10px;
+}
+.get-in-touch-heading {
+  color: var(--dark);
+  font-weight: 200;
+  font-size: 24px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+.about-us-page__inner-wapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+  gap: 16px;
+}

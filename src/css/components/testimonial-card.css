@@ -1,0 +1,59 @@
+.testimonial-card {
+  position: relative;
+  background: linear-gradient(150deg, #2d4357, #6291bd);
+  isolation: isolate;
+}
+.testimonial-card:before {
+  content: "";
+  position: absolute;
+  background: url("/src/assets/images/testimonial-card-quote-img.png") no-repeat
+    center center/contain;
+  width: 200px;
+  /* height: 200px; */
+  aspect-ratio: 1/2;
+  right: 0;
+  bottom: -100px;
+  z-index: -1;
+}
+.testimonial-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.testimonial-card__header img {
+  width: 32px;
+}
+.testimonial-card__body {
+}
+.card-paragraph {
+}
+.testimonial-card__footer {
+  display: flex;
+  gap: 10px;
+}
+.testimonial-card__footer-logo {
+  flex: 1;
+  width: 50%;
+}
+.testimonial-card__footer-name-wrapper {
+  display: grid;
+  gap: 8px;
+  flex: 3;
+}
+.testimonial-card-name-heading,
+.testimonial-card-name-subheading {
+  color: var(--white);
+}
+.testimonial-card-name-heading {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 100%;
+}
+.testimonial-card-name-subheading {
+  font-weight: 100;
+  font-size: 15px;
+  line-height: 100%;
+}
+.testimonial-card hr {
+  opacity: 0.3;
+}

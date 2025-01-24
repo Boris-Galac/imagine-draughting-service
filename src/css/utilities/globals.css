@@ -6,3 +6,13 @@
 .icon {
   object-fit: contain;
 }
+.subpage-margin-block {
+  margin-block: 48px;
+}
+.card--styling {
+  padding: 8px;
+  display: grid;
+  gap: 24px;
+  border-radius: 7px;
+  box-shadow: 0 10px 16px rgba(59, 72, 93, 0.394);
+}

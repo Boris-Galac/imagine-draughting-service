@@ -19,6 +19,131 @@ hamBtn.addEventListener("click", (e) => {
   }
 });
 
+///// 👉 INDEX PAGE
+if (document.querySelector(".main").classList.contains("index-main")) {
+  // HERO SLIDER
+
+  const galleries = document.querySelectorAll(".gallery");
+  const intervalTime = 3000;
+  let slideIntervals = [];
+
+  const nextSlide = (gallery) => {
+    const current = gallery.querySelector(".current");
+    if (current) {
+      current.classList.remove("current");
+      const next = current.nextElementSibling;
+      if (next && next.classList.contains("slide-img")) {
+        next.classList.add("current");
+      } else {
+        gallery.querySelector(".slide-img").classList.add("current");
+      }
+    } else {
+      gallery.querySelector(".slide-img").classList.add("current");
+    }
+  };
+
+  const prevSlide = (gallery) => {
+    const current = gallery.querySelector(".current");
+    if (current) {
+      current.classList.remove("current");
+      const prev = current.previousElementSibling;
+      if (prev && prev.classList.contains("slide-img")) {
+        prev.classList.add("current");
+      } else {
+        gallery
+          .querySelectorAll(".slide-img")
+          [gallery.querySelectorAll(".slide-img").length - 1].classList.add(
+            "current"
+          );
+      }
+    } else {
+      gallery
+        .querySelectorAll(".slide-img")
+        [gallery.querySelectorAll(".slide-img").length - 1].classList.add(
+          "current"
+        );
+    }
+  };
+
+  galleries.forEach((gallery, index) => {
+    const initialSlide = gallery.querySelector(".slide-img.current");
+    if (!initialSlide) {
+      gallery.querySelector(".slide-img").classList.add("current");
+    }
+
+    const interval = setInterval(() => nextSlide(gallery), intervalTime);
+    slideIntervals.push(interval);
+  });
+
+  // PLAY THE VIDEO
+
+  const videoBtn = document.querySelector(".play-the-video");
+
+  videoBtn.addEventListener("click", () => {
+    const videoOverlay = document.createElement("div");
+    videoOverlay.classList.add("overlay-play-the-video");
+
+    const video = document.createElement("video");
+    video.src = "/src/assets/balcon-video.mp4";
+    video.controls = true;
+    video.autoplay = true;
+
+    videoOverlay.appendChild(video);
+
+    document.body.appendChild(videoOverlay);
+
+    videoOverlay.addEventListener("click", (event) => {
+      if (event.target === videoOverlay) {
+        document.body.removeChild(videoOverlay);
+      }
+    });
+  });
+
+  // STATS COUNT
+
+  let valueDisplays = document.querySelectorAll(".count");
+  let interval = 5000;
+
+  let observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          let valueDisplay = entry.target;
+          let startValue = 0;
+          let endValue = Number(valueDisplay.getAttribute("data-num"));
+          let duration = Math.floor(interval / endValue);
+
+          let counter = setInterval(() => {
+            startValue += 1;
+            valueDisplay.textContent = startValue;
+            if (startValue == endValue) {
+              clearInterval(counter);
+            }
+          }, duration);
+
+          // Unobserve the element after animation to prevent repeat
+          observer.unobserve(valueDisplay);
+        }
+      });
+    },
+    { threshold: 0.2 }
+  ); // Trigger when 10% of the element is visible
+
+  valueDisplays.forEach((valueDisplay) => {
+    observer.observe(valueDisplay);
+  });
+}
+///// 👉 PROJECTS PAGE
+if (document.querySelector(".main").classList.contains("projects-main")) {
+  // baguettebox
+
+  baguetteBox.run(".gallery");
+}
+if (document.querySelector(".main").classList.contains("gallery-works-main")) {
+  // baguettebox
+
+  baguetteBox.run(".gallery");
+}
 // HEADER HIDE ON SCROLL
 
 let lastScrollTop = 0;
@@ -65,117 +190,6 @@ window.addEventListener("scroll", (e) => {
   }
 });
 
-// HERO SLIDER
-
-const galleries = document.querySelectorAll(".gallery");
-const intervalTime = 3000;
-let slideIntervals = [];
-
-const nextSlide = (gallery) => {
-  const current = gallery.querySelector(".current");
-  if (current) {
-    current.classList.remove("current");
-    const next = current.nextElementSibling;
-    if (next && next.classList.contains("slide-img")) {
-      next.classList.add("current");
-    } else {
-      gallery.querySelector(".slide-img").classList.add("current");
-    }
-  } else {
-    gallery.querySelector(".slide-img").classList.add("current");
-  }
-};
-
-const prevSlide = (gallery) => {
-  const current = gallery.querySelector(".current");
-  if (current) {
-    current.classList.remove("current");
-    const prev = current.previousElementSibling;
-    if (prev && prev.classList.contains("slide-img")) {
-      prev.classList.add("current");
-    } else {
-      gallery
-        .querySelectorAll(".slide-img")
-        [gallery.querySelectorAll(".slide-img").length - 1].classList.add(
-          "current"
-        );
-    }
-  } else {
-    gallery
-      .querySelectorAll(".slide-img")
-      [gallery.querySelectorAll(".slide-img").length - 1].classList.add(
-        "current"
-      );
-  }
-};
-
-galleries.forEach((gallery, index) => {
-  const initialSlide = gallery.querySelector(".slide-img.current");
-  if (!initialSlide) {
-    gallery.querySelector(".slide-img").classList.add("current");
-  }
-
-  const interval = setInterval(() => nextSlide(gallery), intervalTime);
-  slideIntervals.push(interval);
-});
-
-// PLAY THE VIDEO
-
-const videoBtn = document.querySelector(".play-the-video");
-
-videoBtn.addEventListener("click", () => {
-  const videoOverlay = document.createElement("div");
-  videoOverlay.classList.add("overlay-play-the-video");
-
-  const video = document.createElement("video");
-  video.src = "/src/assets/balcon-video.mp4";
-  video.controls = true;
-  video.autoplay = true;
-
-  videoOverlay.appendChild(video);
-
-  document.body.appendChild(videoOverlay);
-
-  videoOverlay.addEventListener("click", (event) => {
-    if (event.target === videoOverlay) {
-      document.body.removeChild(videoOverlay);
-    }
-  });
-});
-
-// STATS COUNT
-
-let valueDisplays = document.querySelectorAll(".count");
-let interval = 5000;
-
-let observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        let valueDisplay = entry.target;
-        let startValue = 0;
-        let endValue = Number(valueDisplay.getAttribute("data-num"));
-        let duration = Math.floor(interval / endValue);
-
-        let counter = setInterval(() => {
-          startValue += 1;
-          valueDisplay.textContent = startValue;
-          if (startValue == endValue) {
-            clearInterval(counter);
-          }
-        }, duration);
-
-        // Unobserve the element after animation to prevent repeat
-        observer.unobserve(valueDisplay);
-      }
-    });
-  },
-  { threshold: 0.2 }
-); // Trigger when 10% of the element is visible
-
-valueDisplays.forEach((valueDisplay) => {
-  observer.observe(valueDisplay);
-});
 ///////// INTERSECTION OBSERVER
 
 // from left stagger
@@ -217,14 +231,17 @@ var swiper = new Swiper(".reviews-swiper", {
   autoplay: {
     delay: 2500,
   },
-  // navigation: {
-  //   nextEl: ".swiper-button-next",
-  //   prevEl: ".swiper-button-prev",
-  // },
-  // pagination: {
-  //   el: ".swiper-pagination",
-  //   clickable: true,
-  // },
+});
+
+///// PADDING HEADER
+window.addEventListener("resize", (e) => {
+  // if (document.documentElement.scrollWidth < 600) {
+  // const headerPadding = document.querySelector(".header--mobile").scrollHeight;
+
+  document.querySelector(".main").style = `
+      padding-top: 77px;
+    `;
+  // }
 });
 
 /////// GSAP
