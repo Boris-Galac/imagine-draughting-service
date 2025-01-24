@@ -234,16 +234,16 @@ var swiper = new Swiper(".reviews-swiper", {
 });
 
 ///// PADDING HEADER
-window.addEventListener("resize", (e) => {
-  // if (document.documentElement.scrollWidth < 600) {
-  // const headerPadding = document.querySelector(".header--mobile").scrollHeight;
+// window.addEventListener("resize", (e) => {
+//   // if (document.documentElement.scrollWidth < 600) {
+//   // const headerPadding = document.querySelector(".header--mobile").scrollHeight;
 
-  document.querySelector(".main").style = `
-      padding-top: 77px;
-    `;
-  // }
-});
+//   // }
+// });
 
+document.querySelector(".main").style = `
+    padding-top: 77px;
+  `;
 /////// GSAP
 
 gsap.registerPlugin(ScrollTrigger);
