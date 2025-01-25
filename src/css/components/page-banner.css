@@ -20,3 +20,18 @@
   top: 50%;
   right: 12vw;
 }
+.page-banner-img {
+  width: 15vh;
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  right: 3vw;
+  border-radius: 50%;
+  opacity: 0.7;
+}
+@media (min-width: 1200px) {
+  .page-banner-img {
+    width: 18vh;
+    right: 12vw;
+  }
+}

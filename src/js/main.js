@@ -234,16 +234,12 @@ var swiper = new Swiper(".reviews-swiper", {
 });
 
 ///// PADDING HEADER
-// window.addEventListener("resize", (e) => {
-//   // if (document.documentElement.scrollWidth < 600) {
-//   // const headerPadding = document.querySelector(".header--mobile").scrollHeight;
 
-//   // }
-// });
-
-document.querySelector(".main").style = `
-    padding-top: 77px;
-  `;
+if (document.body.classList.contains("subpage")) {
+  document.querySelector(".main").style = `
+      padding-top: 77px;
+    `;
+}
 /////// GSAP
 
 gsap.registerPlugin(ScrollTrigger);
@@ -277,6 +273,17 @@ gsap.from(".blog-article", {
   stagger: 0.3,
   scrollTrigger: {
     trigger: ".blog-article",
+    start: "top 90%",
+    // markers: true,
+  },
+});
+gsap.from(".team-card", {
+  opacity: 0,
+  x: -50,
+  duration: 1,
+  stagger: 0.3,
+  scrollTrigger: {
+    trigger: ".team-card",
     start: "top 90%",
     // markers: true,
   },

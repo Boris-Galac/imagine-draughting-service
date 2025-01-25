@@ -59,3 +59,9 @@
 .project-card__footer-gallery a:hover {
   scale: 1.1;
 }
+@media (min-width: 1200px) {
+  .project-card__footer-gallery {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+}

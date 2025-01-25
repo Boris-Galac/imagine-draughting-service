@@ -1,11 +1,5 @@
-.about-us-page-section {
-}
-.about-us-page__container {
-}
 .about-us-page-wrapper {
   padding-top: 100px;
-}
-.page-heading-wrapper {
 }
 .about-us-page-inner-wrapper {
   margin-bottom: 48px;
@@ -38,4 +32,18 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
   gap: 16px;
+}
+@media (min-width: 1200px) {
+  .about-us-page-wrapper {
+    padding-top: 220px;
+  }
+  .about-us-page-wrapper {
+    padding-top: 220px;
+  }
+  .about-us-page__inner-wapper {
+    display: flex;
+    justify-content: center;
+    /* grid-template-columns: repeat(auto-fill, minmax(60px, 1fr)); */
+    gap: 64px;
+  }
 }
