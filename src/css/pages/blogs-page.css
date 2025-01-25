@@ -1,0 +1,35 @@
+.blogs-main {
+}
+.blogs-main .page-banner {
+  background: linear-gradient(to right, #21516a, #2a5ead);
+}
+.blogs-page-section {
+}
+.blogs-page-section__container {
+}
+.blogs-page-section-wrapper {
+}
+.blogs-page-section-inner-wrapper {
+}
+.blogs-overlay {
+  background: linear-gradient(to bottom, #3855b3, #3770c1);
+  position: fixed;
+  inset: 0;
+  z-index: -5;
+}
+.blogs-main .page-overlay {
+  opacity: 0.1;
+}
+.blogs-main .page-h2-heading {
+  line-height: 100%;
+  margin-bottom: 16px;
+}
+.blogs-main .page-h2-heading,
+.blogs-main .page-subheading,
+.blogs-main p {
+  color: var(--white);
+}
+.blogs-page-section__blogs-col {
+  display: grid;
+  gap: 48px;
+}

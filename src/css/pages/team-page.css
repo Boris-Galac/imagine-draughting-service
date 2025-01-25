@@ -2,10 +2,6 @@
   position: relative;
   isolation: isolate;
 }
-
-.team-section {
-}
-
 .team__container .page-heading-wrapper {
   margin-bottom: 120px;
 }
