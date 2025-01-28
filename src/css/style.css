@@ -14,7 +14,9 @@
 @import "components/team-card.css";
 @import "components/project-card.css";
 @import "components/testimonial-card.css";
+@import "components/search.css";
 @import "components/page-banner.css";
+@import "components/aside.css";
 @import "components/footer.css";
 /*👉 pages */
 @import "pages/page.css";

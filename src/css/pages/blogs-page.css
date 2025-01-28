@@ -1,15 +1,14 @@
-.blogs-main {
+.blogs-main .container {
+  width: min(100% - 32px, 1184px);
+  margin-inline: auto;
 }
 .blogs-main .page-banner {
   background: linear-gradient(to right, #21516a, #2a5ead);
 }
-.blogs-page-section {
-}
-.blogs-page-section__container {
-}
-.blogs-page-section-wrapper {
-}
 .blogs-page-section-inner-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
 }
 .blogs-overlay {
   background: linear-gradient(to bottom, #3855b3, #3770c1);
@@ -32,4 +31,16 @@
 .blogs-page-section__blogs-col {
   display: grid;
   gap: 48px;
+}
+@media (min-width: 1200px) {
+  .blogs-page-section-inner-wrapper {
+    flex-direction: row;
+    gap: 32px;
+  }
+  .blogs-page-section-inner-wrapper > *:nth-child(1) {
+    flex: 3;
+  }
+  .blogs-page-section-inner-wrapper > *:nth-child(2) {
+    flex: 1;
+  }
 }

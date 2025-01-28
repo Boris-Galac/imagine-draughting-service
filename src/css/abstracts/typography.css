@@ -209,6 +209,12 @@ p {
   left: 0;
   display: block;
 }
+.aside-heading {
+  color: var(--white);
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+}
 @media (min-width: 768px) {
   .dream-team .h2-heading > img:nth-child(2) {
     display: none;

@@ -1,0 +1,33 @@
+.aside {
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  display: grid;
+  gap: 32px;
+  background-color: hsla(0, 0%, 100%, 0.005);
+  backdrop-filter: blur(4px);
+  max-height: 700px;
+}
+.aside__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: centers;
+}
+.aside__link {
+  color: var(--white);
+  font-weight: 200;
+  font-size: 18px;
+  width: max-content;
+  white-space: nowrap;
+}
+.aside__dashed-border {
+  border-bottom: 1px dashed #ffffff58;
+  margin-inline: auto;
+  width: 57%;
+  margin-bottom: 9px;
+}
+.aside__item-count {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 200;
+}
