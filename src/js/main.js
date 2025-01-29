@@ -312,3 +312,27 @@ gsap.to(".services__overlay::after", {
     // markers: true,
   },
 });
+
+if (document.querySelector("body").classList.contains("body-faq")) {
+  const faqs = document.querySelectorAll(".faq__question");
+  faqs.forEach((question) => {
+    question.addEventListener("click", (e) => {
+      const faqQuestion = e.currentTarget.nextElementSibling;
+      const icon = question.closest(".faq").querySelector(".faq__plus");
+
+      if (faqQuestion.getAttribute("data-active") === "false") {
+        faqs.forEach((question) => {
+          question.nextElementSibling.setAttribute("data-active", "false");
+          document.querySelectorAll(".faq__plus").forEach((icon) => {
+            icon.setAttribute("data-active", "false");
+          });
+        });
+        faqQuestion.setAttribute("data-active", "true");
+        icon.setAttribute("data-active", "true");
+      } else {
+        faqQuestion.setAttribute("data-active", "false");
+        icon.setAttribute("data-active", "false");
+      }
+    });
+  });
+}

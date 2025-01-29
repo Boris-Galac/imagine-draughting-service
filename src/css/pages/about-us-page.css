@@ -17,7 +17,7 @@
   aspect-ratio: 1;
 }
 .about-us-page__get-in-touch {
-  background-color: #ffffff58;
+  background-color: hsla(0, 0%, 100%, 0.345);
   padding: 16px;
   border-radius: 10px;
 }
@@ -43,7 +43,6 @@
   .about-us-page__inner-wapper {
     display: flex;
     justify-content: center;
-    /* grid-template-columns: repeat(auto-fill, minmax(60px, 1fr)); */
     gap: 64px;
   }
 }

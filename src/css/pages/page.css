@@ -8,6 +8,8 @@
   font-size: clamp(2rem, 7vw, 3rem);
   font-weight: 200;
   color: var(--dark);
+  line-height: 100%;
+  margin-bottom: 16px;
 }
 .page-subheading {
   line-height: 120%;

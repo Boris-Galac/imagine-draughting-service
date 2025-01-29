@@ -262,6 +262,17 @@ button {
     scale: 1.07;
   }
 }
+.back-to-blogs-btn {
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-block: 64px;
+  font-weight: 200;
+}
+.back-to-blogs-btn img {
+  height: 2cap;
+}
 @media (min-width: 1024px) {
   .whatsapp-btn {
     left: 32px;
