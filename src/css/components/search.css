@@ -19,8 +19,6 @@
   text-align: center;
   transition: 0.25s;
 }
-.search-form__input:hover {
-}
 .search-form__input:hover,
 .search-form__input:focus {
   border-radius: 100px;

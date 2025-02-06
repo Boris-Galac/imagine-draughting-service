@@ -110,4 +110,15 @@
   .blog-article .blog-article__thumbnail img {
     height: 100%;
   }
+  .blog-article__body {
+    display: grid;
+    place-content: center;
+  }
+  .blog-article__heading {
+    font-size: 24px;
+  }
+  .blog-article {
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+  }
 }

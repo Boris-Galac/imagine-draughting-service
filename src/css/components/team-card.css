@@ -11,8 +11,8 @@
 .team-card::before {
   content: "";
   position: absolute;
-  background: url("/src/assets/images/team-card-overlay.png") no-repeat center
-    center/contain;
+  background: url("/wp-content/themes/myTheme/src/assets/images/team-card-overlay.png")
+    no-repeat center center/contain;
   aspect-ratio: 1;
   left: 0;
   top: 0;

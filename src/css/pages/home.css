@@ -12,8 +12,8 @@
 }
 .hero__wrapper {
   display: grid;
-  grid-template-rows: 16% 54% 0% 28%;
-  height: 90vh;
+  grid-template-rows: 15% auto auto auto;
+  height: 100vh;
   padding-bottom: 11px;
 }
 .hero__credits {
@@ -37,7 +37,7 @@
 }
 .hero__visual-wrapper {
   display: grid;
-  grid-row: 4;
+  grid-row: 3;
 }
 .hero__headline-wrapper {
   display: grid;
@@ -83,7 +83,7 @@
   width: 70%;
 }
 .hero__footer {
-  grid-row: 5;
+  grid-row: 4;
   padding-inline: 1rem;
   display: flex;
 }
@@ -93,7 +93,7 @@
   justify-content: center;
   align-items: center;
   margin-inline: auto;
-  margin-left: 95px;
+  margin-left: 83px;
 }
 .hero-visual__box--google-reviews {
   cursor: pointer;
@@ -107,6 +107,7 @@
   letter-spacing: 1px;
 }
 .hero-visual--mobile {
+  place-self: center;
   width: 100%;
   animation: visual-mobile 3s forwards;
 }
@@ -414,8 +415,8 @@
 .mini-gallery::before {
   content: "";
   position: absolute;
-  background: url("/src/assets/images/mini-gallery-overlay.png") no-repeat
-    center center/cover;
+  background: url("/wp-content/themes/myTheme/src/assets/images/mini-gallery-overlay.png")
+    no-repeat center center/cover;
   inset: 0;
   width: 100%;
   height: 100%;
@@ -580,8 +581,8 @@
 .services__overlay::after {
   content: "";
   position: absolute;
-  background: url("/src/assets/images/service-overlay-graphic.png") no-repeat
-    center center/cover;
+  background: url("/wp-content/themes/myTheme/src/assets/images/service-overlay-graphic.png")
+    no-repeat center center/cover;
   inset: 0;
   background-attachment: fixed;
   height: 100%;
@@ -723,8 +724,8 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: url("/src/assets/images/dream-team-overlay.jpg") no-repeat center
-    center/cover;
+  background: url("/wp-content/themes/myTheme/src/assets/images/dream-team-overlay.jpg")
+    no-repeat center center/cover;
   width: 100%;
   height: 100%;
   background-attachment: fixed;
@@ -752,8 +753,8 @@
 .extras::before {
   content: "";
   position: absolute;
-  background: url("/src/assets/images/extras-overlay.png") no-repeat center
-    center/cover;
+  background: url("/wp-content/themes/myTheme/src/assets/images/extras-overlay.png")
+    no-repeat center center/cover;
   width: 100%;
   height: 100%;
   z-index: -1;
@@ -827,14 +828,14 @@
   }
 }
 /* 👉 Blog section */
-.blog {
+.blog-section {
   padding-block: 30vh;
 }
-.blog::before {
+.blog-section::before {
   content: "";
   position: absolute;
-  background: url("/src/assets/images/blog-overlay-mogile.svg") no-repeat center
-    center/cover;
+  background: url("/wp-content/themes/myTheme/src/assets/images/blog-overlay-mogile.svg")
+    no-repeat center center/cover;
   width: 100%;
   height: 100%;
   inset: 0;
@@ -842,11 +843,11 @@
 }
 
 @media (min-width: 1300px) {
-  .blog::before {
+  .blog-section::before {
     content: "";
     position: absolute;
-    background: url("/src/assets/images/blog-overlay.svg") no-repeat center
-      center/contain;
+    background: url("/wp-content/themes/myTheme/src/assets/images/blog-overlay.svg")
+      no-repeat center center/contain;
     width: 100%;
     height: 100%;
     inset: 0;
@@ -873,8 +874,8 @@
 .hire-us::before {
   content: "";
   position: absolute;
-  background: url("/src/assets/images/hire-us-overlay.png") no-repeat center
-    center/cover;
+  background: url("/wp-content/themes/myTheme/src/assets/images/hire-us-overlay.png")
+    no-repeat center center/cover;
   inset: 0;
   width: 100%;
   height: 100%;

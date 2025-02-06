@@ -6,8 +6,8 @@
 .testimonial-card:before {
   content: "";
   position: absolute;
-  background: url("/src/assets/images/testimonial-card-quote-img.png") no-repeat
-    center center/contain;
+  background: url("/wp-content/themes/myTheme/src/assets/images/testimonial-card-quote-img.png")
+    no-repeat center center/contain;
   width: 200px;
   /* height: 200px; */
   aspect-ratio: 1/2;
@@ -22,10 +22,6 @@
 }
 .testimonial-card__header img {
   width: 32px;
-}
-.testimonial-card__body {
-}
-.card-paragraph {
 }
 .testimonial-card__footer {
   display: flex;

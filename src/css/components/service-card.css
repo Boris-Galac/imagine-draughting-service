@@ -7,7 +7,6 @@
   overflow: hidden;
   box-shadow: 0 10px 16px rgba(0, 0, 0, 0.272);
   max-width: 504px;
-  /* opacity: 0; */
 }
 .service-card__thumbnail {
   width: 100%;

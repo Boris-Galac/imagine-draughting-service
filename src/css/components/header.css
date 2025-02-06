@@ -3,7 +3,7 @@
   left: 0;
   right: 0;
   display: flex;
-  padding: 0.5rem;
+  padding: 5px;
   align-items: center;
   justify-content: space-between;
   transition: 0.6s;
@@ -82,23 +82,10 @@
   transform: scaleX(1);
 }
 .header__logo {
-  width: 35vw;
+  width: min(35vw, 120px);
   z-index: 1000;
 }
-.header__logo-desktop {
-  width: 150px;
-}
-.header--desktop {
-  width: 100%;
-  display: none;
-}
-.header--mobile .header__logo {
-  width: max-content;
-}
-.header--mobile .header__logo img {
-  max-width: 140px;
-}
-.header--mobile {
+.header {
   position: fixed;
   background: linear-gradient(
     to bottom,
@@ -108,7 +95,7 @@
   backdrop-filter: blur(7px);
   z-index: 150;
 }
-.header--mobile.active {
+.header.active {
   position: fixed;
   box-shadow: 0px 13px 20px 0px rgba(0, 23, 52, 0.2);
 }
@@ -127,12 +114,6 @@
 .nav__link--home::after {
   bottom: 10px;
 }
-.header--mobile .header__contact-info {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-}
-
 @media (min-width: 1024px) {
   .nav__link--home {
     display: flex;
@@ -150,73 +131,48 @@
   }
 }
 @media (min-width: 1200px) {
-  .header--desktop {
-    background-color: var(--primary-clr);
+  /* HEADER */
+  .header {
+    background: unset;
     position: fixed;
-    width: 50%;
-    display: flex;
-    z-index: 500;
-    padding-block: 8px;
-    backdrop-filter: blur(7px);
+    z-index: 5000;
+    background: linear-gradient(
+      to bottom,
+      rgb(65, 73, 82) 95%,
+      rgb(31, 35, 44) 100%
+    );
+    right: 50%;
+    padding: 8px;
   }
-  .header__logo-desktop {
-    display: none;
-  }
-  .ham .header__logo {
-    z-index: 0;
-  }
-  .nav[aria-expanded="false"] {
-    animation: unset !important;
-  }
-  .ham-btn--desktop {
+  .ham-btn {
     display: none !important;
   }
-  .nav--desktop {
-    position: relative;
-    height: auto;
-    z-index: 1000;
+  .header__logo {
+    display: none;
   }
-  .nav--desktop .nav__list {
+  .nav {
+    position: static;
     display: flex;
-    justify-content: space-between;
-    padding: 0;
-    gap: 0;
-    width: min(100%, 700px);
-    backdrop-filter: unset;
+    height: auto;
   }
-  .nav--desktop .nav__link {
-    color: var(--white);
+  .nav__list {
+    display: flex;
+    gap: unset;
+    padding: 0;
+  }
+  .nav__link {
     font-size: 16px;
     width: max-content;
     padding: 16px;
-    margin-inline: auto;
   }
-  .header--mobile {
-    display: none;
+  .ham-btn > * {
+    background-color: var(--white) !important;
   }
-  .header--desktop.active {
-    position: fixed;
-    left: 0;
-    right: 0;
-    z-index: 50000;
-    background-color: hsla(330, 2%, 20%, 0.75) !important;
-
-    box-shadow: 0px 13px 20px 0px rgba(0, 23, 52, 0.2);
-    width: 100%;
+  .header__logo {
+    width: 150px;
   }
-  .header--desktop.active .nav__list {
-    gap: 64px;
-  }
-  .header--desktop.active .nav {
-    backdrop-filter: unset;
-  }
-  .header--desktop.active .header__logo-desktop {
-    display: block;
-  }
-  .header--desktop.active .header__contact-info {
-    display: grid;
-    gap: 2px;
-    white-space: nowrap;
+  .nav[aria-expanded="false"] {
+    animation: unset !important;
   }
   .header__contact-info > a {
     display: flex;
@@ -232,33 +188,26 @@
     background-color: var(--white);
     padding-inline: 2px;
   }
-}
-@media (min-width: 1500px) {
-  .header--desktop .header__logo-desktop {
+  .header.active {
+    left: 0;
+    right: 0;
+    top: unset !important;
+  }
+  .header.active .header__logo {
+    display: block;
+  }
+  .subpage .main {
+    padding-top: 74px !important;
+  }
+  .subpage .header {
+    width: 100%;
+  }
+  .subpage .header__logo {
     display: block;
   }
 }
 @media (min-width: 1600px) {
-  .nav--desktop .nav__list {
-    display: flex;
-    justify-content: space-between;
-    padding: 0;
-    width: 100%;
-  }
-  .header--desktop {
-    position: fixed;
-    width: 50%;
-    display: flex;
-    z-index: 500;
-    padding-block: 8px;
-  }
-
-  .header--desktop {
-    position: fixed;
-    width: 50%;
-    display: flex;
-    z-index: 500;
-    padding-block: 8px;
-    gap: 32px;
+  .header__logo {
+    display: block;
   }
 }

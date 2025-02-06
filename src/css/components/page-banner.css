@@ -4,12 +4,13 @@
   height: 27vh;
   background: linear-gradient(to right, #151f2e, #436394);
   box-shadow: 0 20px 40px rgba(46, 56, 76, 0.644);
+  overflow: hidden;
 }
 .page-banner::before {
   content: "";
   position: absolute;
-  background: url("/src/assets/images/banner-logo-overlay.png") no-repeat center
-    center/contain;
+  background: url("/wp-content/themes/myTheme/src/assets/images/banner-logo-overlay.png")
+    no-repeat center center/contain;
   inset: 0;
   z-index: -1;
 }
@@ -29,9 +30,20 @@
   border-radius: 50%;
   opacity: 0.7;
 }
+.contact-video-overlay {
+  position: absolute;
+  z-index: -1;
+  top: -130%;
+}
+
 @media (min-width: 1200px) {
   .page-banner-img {
     width: 18vh;
     right: 12vw;
+  }
+  .contact-video-overlay {
+    position: absolute;
+    z-index: -1;
+    top: -270%;
   }
 }

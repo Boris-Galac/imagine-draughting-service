@@ -148,7 +148,6 @@ if (document.querySelector(".main").classList.contains("gallery-works-main")) {
 
 let lastScrollTop = 0;
 let navbar = document.querySelector(".header");
-let navMobile = document.querySelector(".header--mobile");
 let navbarHeight = document.querySelector(".header").scrollHeight;
 window.addEventListener("scroll", (e) => {
   let scrollTop = window.scrollY || document.documentElement.scrollTop;
@@ -160,7 +159,7 @@ window.addEventListener("scroll", (e) => {
   lastScrollTop = scrollTop;
 
   if (document.querySelector(".nav").getAttribute("aria-expanded") === "true") {
-    navMobile.style = `
+    navbar.style = `
     top: 0;
     `;
   }
@@ -180,12 +179,12 @@ window.addEventListener("scroll", (e) => {
   if (window.scrollY > 150) {
     wupBtn.classList.add("active");
     backToTopbtn.setAttribute("data-visible", "true");
-    navMobile.classList.add("active");
-    headerDesktop.classList.add("active");
+    navbar.classList.add("active");
+    // headerDesktop.classList.add("active");
   } else {
     wupBtn.classList.remove("active");
-    navMobile.classList.remove("active");
-    headerDesktop.classList.remove("active");
+    navbar.classList.remove("active");
+    // headerDesktop.classList.remove("active");
     backToTopbtn.setAttribute("data-visible", "false");
   }
 });

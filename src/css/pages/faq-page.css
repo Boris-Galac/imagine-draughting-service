@@ -1,22 +1,10 @@
-.faq-page-section {
-}
-.faq-page-section__container {
-}
 .faq-page-section-wrapper {
   background-color: hsla(213, 77%, 88%, 0.778);
   padding: 16px;
   border-radius: 4px;
   box-shadow: 0 44px 114px rgba(0, 0, 0, 0.243);
 }
-.faq-page-section-inner-wrapper {
-}
-.team-wrapper,
-.about-us-page-wrapper {
-}
 /* FAQ */
-.faq {
-  /* position: relative; */
-}
 .faq__question {
   display: flex;
   align-items: center;

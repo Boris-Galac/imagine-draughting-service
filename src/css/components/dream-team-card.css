@@ -57,7 +57,7 @@
 .dream-team-card__inner::before {
   content: "";
   position: absolute;
-  background: url("/src/assets/images/dream-team-designers/dream-team-card-overlay.png")
+  background: url("/wp-content/themes/myTheme/src/assets/images/dream-team-designers/dream-team-card-overlay.png")
     no-repeat center center/cover;
   inset: 0;
   mix-blend-mode: color-burn;
